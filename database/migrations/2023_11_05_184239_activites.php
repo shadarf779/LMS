@@ -11,7 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('activites', function (Blueprint $table) {
+            $table->id();
+            $table->string('departmemntID');
+            $table->string('name');
+            $table->string('descrition');
+            $table->string('date');
+            $table->string('location');
+            $table->string('MaxPartcipants');
+            $table->string('deadline');
+            $table->string('RegistrationCode')->unique;
+            $table->timestamps();
+        });
     }
 
     /**

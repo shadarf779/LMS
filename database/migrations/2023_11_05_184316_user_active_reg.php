@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('userActiveReg', function (Blueprint $table) {
+            $table->id();
+            $table->string('RegisterationID');
+            $table->string('UserID');
+            $table->string('ActivityID');
+            $table->string('RegisteratuinDate');
+            $table->string('Status')->default("Pending");
+            $table->timestamps();
+        });
     }
 
     /**

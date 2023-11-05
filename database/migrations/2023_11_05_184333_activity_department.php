@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('activityDep', function (Blueprint $table) {
+            $table->id();
+            $table->string('activityID');
+            $table->string('DepartmentID');
+            $table->string('DepartmentAccesssLevel');
+            $table->timestamps();
+        });
     }
 
     /**

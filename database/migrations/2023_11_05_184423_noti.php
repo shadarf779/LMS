@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('noti', function (Blueprint $table) {
+            $table->id();
+            $table->string('userID');
+            $table->string('notificationText');
+            $table->string('IsRead')->default("No");
+            $table->string('RegistrationCode')->unique;
+            $table->timestamps();
+        });
     }
 
     /**

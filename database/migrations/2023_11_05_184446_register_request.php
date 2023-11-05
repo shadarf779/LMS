@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('registerRequest', function (Blueprint $table) {
+            $table->id();
+            $table->string('userID');
+            $table->string('avtivityID');
+            $table->string('RequstDate');
+            $table->string('status');
+            $table->string('AdminAproval');
+            $table->timestamps();
+        });
     }
 
     /**
