@@ -86,13 +86,10 @@
                             <div class="row mb-5 text-center">
                                 <div class="col-12 text-container">
                                     <h1 class="display-2 text-white mt-3">
-                                        Explore Our Training and Seminar Videos
+                                        Lorem ipsum dolor sit amet
                                     </h1>
                                     <p class="lead text-white w-75 m-auto mb-4">
-                                        Whether you're a beginner or an experienced
-                                        professional, our carefully curated content will
-                                        empower you to enhance your skills and expand your
-                                        knowledge
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi voluptas libero rem aut. Saepe error quos vero ipsum esse? Aperiam, numquam. Nostrum perspiciatis, velit pariatur dignissimos debitis commodi laboriosam eos?
                                     </p>
                                     @if (Route::has('login'))
                                     <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
@@ -199,11 +196,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <h2>Unlock Your Potential with Engaging Content</h2>
+                                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
                                     <p>
-                                        Our wide range of training and seminar videos are
-                                        designed to empower you with valuable knowledge and
-                                        skills.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam vero ducimus repudiandae ex nobis consequuntur possimus eveniet accusantium unde alias eius, praesentium dignissimos ea, ut optio vel neque tenetur.
                                     </p>
 
                                     <!-- list-unstyled: bullet point nahele lagall default padding browser -->

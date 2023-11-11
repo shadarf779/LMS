@@ -86,13 +86,10 @@
                 <div class="row mb-5 text-center">
                     <div class="col-12 text-container">
                         <h1 class="display-2 text-white mt-3">
-                            Explore Our Training and Seminar Videos
+                            Lorem ipsum dolor sit
                         </h1>
                         <p class="lead text-white w-75 m-auto mb-4">
-                            Whether you're a beginner or an experienced
-                            professional, our carefully curated content will
-                            empower you to enhance your skills and expand your
-                            knowledge
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam at vitae atque reiciendis illum distinctio maxime explicabo error earum dolor pariatur, alias voluptas ducimus perferendis in iusto architecto beatae. Consectetur.
                         </p>
                         @if (Route::has('login'))
                         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
@@ -205,11 +202,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h2>Unlock Your Potential with Engaging Content</h2>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
                         <p>
-                            Our wide range of training and seminar videos are
-                            designed to empower you with valuable knowledge and
-                            skills.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam vero ducimus repudiandae ex nobis consequuntur possimus eveniet accusantium unde alias eius, praesentium dignissimos ea, ut optio vel neque tenetur.
                         </p>
 
                         <!-- list-unstyled: bullet point nahele lagall default padding browser -->
@@ -282,7 +277,145 @@
                 </div>
             </div>
         </section>
+  <!---------------------------- Takeaways ---------------------------->
+  <section id="takeaways" class="takeaways my-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-md-8 offset-md-2">
+                <h2>Key Takeaways</h2>
+                <p class="lead">
+                    Here are some of the takeaways and benefits you can
+                    expect from our programs.
+                </p>
 
+            </div>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-0 border-0 p-3">
+                    <div class="card-body text-center">
+                        <i
+                            class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
+                        ></i>
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos debitis quod beatae aspernatur. Delectus, nulla? Enim eum quam nemo ab illum commodi quidem? Dignissimos id ipsam dolorum pariatur quas.
+                        </p>
+                        <a
+                        href="#register"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Enroll Now
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-0 border-0 p-3">
+                    <div class="card-body text-center">
+                        <i
+                            class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
+                        ></i>
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos debitis quod beatae aspernatur. Delectus, nulla? Enim eum quam nemo ab illum commodi quidem? Dignissimos id ipsam dolorum pariatur quas.
+                        </p>
+                        <a
+                        href="#register"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Enroll Now
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-0 border-0 p-3">
+                    <div class="card-body text-center">
+                        <i
+                            class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
+                        ></i>
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos debitis quod beatae aspernatur. Delectus, nulla? Enim eum quam nemo ab illum commodi quidem? Dignissimos id ipsam dolorum pariatur quas.
+                        </p>
+                        <a
+                        href="#register"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Enroll Now
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-0 border-0 p-3">
+                    <div class="card-body text-center">
+                        <i
+                            class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
+                        ></i>
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos debitis quod beatae aspernatur. Delectus, nulla? Enim eum quam nemo ab illum commodi quidem? Dignissimos id ipsam dolorum pariatur quas.
+                        </p>
+                        <a
+                        href="#register"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Enroll Now
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-0 border-0 p-3">
+                    <div class="card-body text-center">
+                        <i
+                            class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
+                        ></i>
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos debitis quod beatae aspernatur. Delectus, nulla? Enim eum quam nemo ab illum commodi quidem? Dignissimos id ipsam dolorum pariatur quas.
+                        </p>
+                         <a
+                        href="#register"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Enroll Now
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-0 border-0 p-3">
+                    <div class="card-body text-center">
+                        <i
+                            class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
+                        ></i>
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos debitis quod beatae aspernatur. Delectus, nulla? Enim eum quam nemo ab illum commodi quidem? Dignissimos id ipsam dolorum pariatur quas.
+                        </p>
+                         <a
+                        href="#register"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Enroll Now
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <!---------------------------- Details 1 ---------------------------->
 
         <section id="discover" class="details py-6 bg-light">
@@ -473,13 +606,9 @@
                         <div class="bg-white p-5">
                             <ul class="list-unstyled">
                                 <li class="border-bottom pb-3">
-                                    <h5>1. Comprehensive Training</h5>
+                                    <h5> Lorem ipsum</h5>
                                     <p>
-                                        Our courses provide comprehensive
-                                        training in a wide range of topics. From
-                                        beginner-level fundamentals to advanced
-                                        concepts, we offer in-depth content to
-                                        cater to learners of all levels.
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit cum fugit, nobis omnis ratione aspernatur adipisci ipsa neque tenetur laudantium, aliquam dolore inventore quidem voluptas ea perspiciatis, vitae quo culpa.
                                     </p>
                                 </li>
                                 <li class="border-bottom pb-3 pt-5">
@@ -579,130 +708,7 @@
             </div>
         </section>
 
-        <!---------------------------- Takeaways ---------------------------->
-        <section id="takeaways" class="takeaways my-5 bg-light">
-            <div class="container">
-                <div class="row text-center mb-5">
-                    <div class="col-md-8 offset-md-2">
-                        <h2>Key Takeaways</h2>
-                        <p class="lead">
-                            Here are some of the takeaways and benefits you can
-                            expect from our programs.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Row 1 -->
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 rounded-0 border-0 p-3">
-                            <div class="card-body text-center">
-                                <i
-                                    class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                ></i>
-                                <h5 class="card-title">Scientific Insights</h5>
-                                <p class="card-text">
-                                    Explore the latest scientific research and
-                                    gain valuable insights into various
-                                    subjects, from physics to biology.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 rounded-0 border-0 p-3">
-                            <div class="card-body text-center">
-                                <i
-                                    class="fas fa-key fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                ></i>
-                                <h5 class="card-title">
-                                    Cybersecurity Awareness
-                                </h5>
-                                <p class="card-text">
-                                    Discover the importance of cybersecurity and
-                                    learn how to protect yourself and your
-                                    digital assets from cyber threats.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 rounded-0 border-0 p-3">
-                            <div class="card-body text-center">
-                                <i
-                                    class="fas fa-newspaper fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                ></i>
-                                <h5 class="card-title">Industry Updates</h5>
-                                <p class="card-text">
-                                    Stay informed about the latest news and
-                                    updates in your industry, keeping you ahead
-                                    of the curve and facilitating professional
-                                    growth.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Row -->
-                    <div class="col-md-4">
-                        <div class="card mb-4 rounded-0 border-0 p-3">
-                            <div class="card-body text-center">
-                                <i
-                                    class="fas fa-users fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                ></i>
-                                <h5 class="card-title">
-                                    Collaborative Networking
-                                </h5>
-                                <p class="card-text">
-                                    Connect with professionals from diverse
-                                    backgrounds and industries to foster
-                                    collaboration and expand your professional
-                                    network.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 rounded-0 border-0 p-3">
-                            <div class="card-body text-center">
-                                <i
-                                    class="fas fa-handshake fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                ></i>
-                                <h5 class="card-title">
-                                    Partnership Opportunities
-                                </h5>
-                                <p class="card-text">
-                                    Discover potential partnership opportunities
-                                    with like-minded individuals and
-                                    organizations, opening doors to new
-                                    collaborations and ventures.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 rounded-0 border-0 p-3">
-                            <div class="card-body text-center">
-                                <i
-                                    class="fas fa-chart-bar fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                ></i>
-                                <h5 class="card-title">Data-driven Insights</h5>
-                                <p class="card-text">
-                                    Leverage data analytics to gain valuable
-                                    insights and make informed decisions,
-                                    unlocking new possibilities for growth and
-                                    success.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!---------------------------- Subscribe Form ---------------------------->
         <section id="subscribe" class="subscribe my-5">
