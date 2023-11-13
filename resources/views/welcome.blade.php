@@ -1,781 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-            <!DOCTYPE html>
-            <html lang="en">
-                <head>
-                    <meta charset="UTF-8" />
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-                        rel="stylesheet"
+    <title>Course Details | LMS</title>
+
+    <meta
+      name="keywords"
+      content="
+"
+    />
+    <meta
+      name="description"
+      content="
+"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/img/1632723997.png"
+    />
+
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.min.css" />
+
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+
+    <link rel="stylesheet" href="assets/css/slick.css" />
+
+    <link rel="stylesheet" href="assets/css/toastr.min.css" />
+
+    <link rel="stylesheet" href="assets/css/datatables-1.10.23.min.css" />
+
+    <link rel="stylesheet" href="assets/css/datatables.bootstrap4.min.css" />
+
+    <link rel="stylesheet" href="assets/css/monokai-sublime.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+    <link rel="stylesheet" href="assets/css/default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link rel="stylesheet" href="assets/css/mega-menu.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/css/website-color.css?primary_color=0066FF&amp;secondary_color=F16001&amp;footer_background_color=001B61&amp;copyright_background_color=003A91&amp;breadcrumb_overlay_color=001B61&amp;breadcrumb_overlay_opacity=0.50"
+    />
+
+    <link rel="stylesheet" href="assets/css/summernote-content.css" />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/coursedetail.css">
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
+
+   <!---------------------------- Navigation ---------------------------->
+   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <img src="images/soranbanner.png" alt="" width="50bit" />
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home"
+                        >Home</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#discover">Discover</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#summary">Summary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#takeaways">Takeaways</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#subscribe">Subscribe</a>
+                </li>
+            </ul>
+            <span class="nav-item">
+                <span class="fa-stack">
+                    <a href="#">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i
+                            class="fab fa-facebook-f fa-stack-1x text-white"
+                        ></i>
+                    </a>
+                </span>
+            </span>
+            <span class="nav-item">
+                <span class="fa-stack">
+                    <a href="#">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i
+                            class="fab fa-twitter fa-stack-1x text-white"
+                        ></i>
+                    </a>
+                </span>
+            </span>
+        </div>
+    </div>
+</nav>
+
+
+<!---------------------------- Header ---------------------------->
+        <!-- vh-100 wata barzyakay 100% heighte brasaraka dabet -->
+
+
+
+
+    <!--====== COURSE DETAILS PART START ======-->
+    <section class="course-details-area">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="course-details-items white-bg">
+              <div class="course-thumb">
+                <div class="tab-btns">
+                  <ul
+                    class="nav nav-pills d-flex justify-content-between"
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        id="pills-1-tab"
+                        data-toggle="pill"
+                        href="#pills-1"
+                        role="tab"
+                        aria-controls="pills-1"
+                        aria-selected="true"
+                        ><i class="fal fa-list"></i> Description</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        id="pills-2-tab"
+                        data-toggle="pill"
+                        href="#pills-2"
+                        role="tab"
+                        aria-controls="pills-2"
+                        aria-selected="false"
+                        ><i class="fal fa-book"></i> Curriculum</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        id="pills-3-tab"
+                        data-toggle="pill"
+                        href="#pills-3"
+                        role="tab"
+                        aria-controls="pills-3"
+                        aria-selected="false"
+                        ><i class="fal fa-user"></i> Instructor</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        id="pills-4-tab"
+                        data-toggle="pill"
+                        href="#pills-4"
+                        role="tab"
+                        aria-controls="pills-4"
+                        aria-selected="false"
+                        ><i class="fal fa-stars"></i> Reviews</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-1"
+                  role="tabpanel"
+                  aria-labelledby="pills-1-tab"
+                >
+                  <div class="course-details-item pt-4">
+                    <div class="summernote-content">
+                      <p style="line-height: 1.6">
+                        <span
+                          style="
+                            font-family: 'Open Sans', Arial, sans-serif;
+                            text-align: justify;
+                            font-size: 18px;
+                          "
+                          >Sed ut perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperiam, eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto beatae vitae dicta sunt
+                          explicabo. Nemo enim ipsam voluptatem quia voluptas
+                          sit aspernatur aut odit aut fugit, sed quia
+                          consequuntur magni dolores eos qui ratione voluptatem
+                          sequi nesciunt.</span
+                        >
+                      </p>
+                      <p style="line-height: 1.6">
+                        <span
+                          style="
+                            font-family: 'Open Sans', Arial, sans-serif;
+                            text-align: justify;
+                            font-size: 18px;
+                          "
+                          >Neque porro quisquam est, qui dolorem ipsum quia
+                          dolor sit amet, consectetur, adipisci velit, sed quia
+                          non numquam eius modi tempora incidunt ut labore et
+                          dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                          minima veniam, quis nostrum exercitationem ullam
+                          corporis suscipit laboriosam</span
+                        >
+                      </p>
+                      <p style="line-height: 1.6">
+                        <span
+                          style="
+                            font-family: 'Open Sans', Arial, sans-serif;
+                            text-align: justify;
+                            font-size: 18px;
+                          "
+                          ><br
+                        /></span>
+                      </p>
+                      <p style="line-height: 1.6">
+                        <span
+                          style="
+                            font-family: 'Open Sans', Arial, sans-serif;
+                            text-align: justify;
+                            font-size: 18px;
+                          "
+                          ><span style="font-weight: 600"
+                            >Requirements:</span
+                          ></span
+                        >
+                      </p>
+                      <ul>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Aliquam tincidunt mauris eu risus.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Vestibulum auctor dapibus neque.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Nunc dignissim risus id metus.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Cras ornare tristique elit.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Vivamus vestibulum ntulla nec ante
+                        </li>
+                      </ul>
+                      <p
+                        style="
+                          font-size: 18px;
+                          line-height: 1;
+                          font-style: inherit;
+                          font-family: stolzl, sans-serif;
+                        "
+                      >
+                        <span style="font-weight: 600"
+                          >What this couse covers:</span
+                        >
+                      </p>
+                      <ul>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-size: 18px;
+                            line-height: 1;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          <span
+                            style="font-style: inherit; font-weight: inherit"
+                            >Vestibulum auctor dapibus neque.</span
+                          >
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Nunc dignissim risus id metus.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Cras ornare tristique elit.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Vivamus vestibulum ntulla nec ante
+                        </li>
+                      </ul>
+                      <p
+                        style="
+                          font-size: 18px;
+                          line-height: 28px;
+                          font-style: inherit;
+                          font-weight: inherit;
+                          font-family: stolzl, sans-serif;
+                        "
+                      >
+                        <span
+                          style="
+                            font-family: 'Open Sans', Arial, sans-serif;
+                            text-align: justify;
+                          "
+                          >consectetur, adipisci velit, sed quia non numquam
+                          eius modi tempora incidunt ut labore et dolore magnam
+                          aliquam quaerat voluptatem. Ut enim ad minima veniam,
+                          quis nostrum exercitationem ullam corporis suscipit
+                          laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                          Quis autem vel eum iure reprehenderit qui in ea
+                          voluptate velit esse quam nihil molestiae consequatur,
+                          vel illum qui dolorem eum fugiat quo voluptas nulla
+                          pariatur</span
+                        >
+                      </p>
+                      <p
+                        style="
+                          font-size: 18px;
+                          line-height: 28px;
+                          font-style: inherit;
+                          font-weight: inherit;
+                          font-family: stolzl, sans-serif;
+                        "
+                      >
+                        <span
+                          style="
+                            font-family: 'Open Sans', Arial, sans-serif;
+                            text-align: justify;
+                          "
+                          ><br
+                        /></span>
+                      </p>
+                      <p
+                        style="
+                          font-size: 18px;
+                          line-height: 1;
+                          font-style: inherit;
+                          font-family: stolzl, sans-serif;
+                        "
+                      >
+                        <span style="font-weight: 600"
+                          >What will you learn:</span
+                        >
+                      </p>
+                      <ul>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-size: 18px;
+                            line-height: 1;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          <span
+                            style="font-style: inherit; font-weight: inherit"
+                            >Vestibulum auctor dapibus neque.</span
+                          >
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Nunc dignissim risus id metus.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Cras ornare tristique elit.
+                        </li>
+                        <li
+                          style="
+                            font-style: inherit;
+                            font-weight: inherit;
+                            font-size: 18px;
+                            line-height: 28px;
+                            font-family: stolzl, sans-serif;
+                          "
+                        >
+                          Vivamus vestibulum ntulla nec ante
+                        </li>
+                      </ul>
+                    </div>
+
+                   
+                  </div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="pills-2"
+                  role="tabpanel"
+                  aria-labelledby="pills-2-tab"
+                >
+                  <div class="curriculum-accordion">
+                    <div class="accordion" id="curriculumAccordion">
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="title"
+                            data-toggle="collapse"
+                            data-target="#collapse-1"
+                            aria-expanded="true"
+                          >
+                            The first steps
+                            <span class="badge badge-warning">01m</span>
+                          </a>
+                        </div>
+                        <div
+                          id="collapse-1"
+                          class="collapse show"
+                          aria-labelledby="heading-1"
+                          data-parent="#curriculumAccordion"
+                        >
+                          <div class="card-body">
+                            <ul class="play-list">
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>ntroduction to
+                                  laravel and MVC<span class="time"
+                                    >01:00</span
+                                  ></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Reference
+                                  files<span class="time">00:00</span></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="collapsed title"
+                            data-toggle="collapse"
+                            data-target="#collapse-3"
+                            aria-expanded="false"
+                          >
+                            Local Environment Setup
+                            <span class="badge badge-warning">00m</span>
+                          </a>
+                        </div>
+                        <div
+                          id="collapse-3"
+                          class="collapse"
+                          aria-labelledby="heading-3"
+                          data-parent="#curriculumAccordion"
+                        >
+                          <div class="card-body">
+                            <ul class="play-list">
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>New - Tools<span
+                                    class="time"
+                                    >00:00</span
+                                  ></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>New - Using
+                                  MySQL<span class="time">00:00</span></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>New- Installing
+                                  Node.js<span class="time">00:00</span></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>New - Installing
+                                  Laravel<span class="time">00:00</span></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="collapsed title"
+                            data-toggle="collapse"
+                            data-target="#collapse-4"
+                            aria-expanded="false"
+                          >
+                            Laravel Fundamentals - Routes
+                            <span class="badge badge-warning">00m</span>
+                          </a>
+                        </div>
+                        <div
+                          id="collapse-4"
+                          class="collapse"
+                          aria-labelledby="heading-4"
+                          data-parent="#curriculumAccordion"
+                        >
+                          <div class="card-body">
+                            <ul class="play-list">
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Route
+                                  Introduction<span class="time">00:00</span></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Routes<span
+                                    class="time"
+                                    >00:00</span
+                                  ></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Naming Routes<span
+                                    class="time"
+                                    >00:00</span
+                                  ></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="collapsed title"
+                            data-toggle="collapse"
+                            data-target="#collapse-5"
+                            aria-expanded="false"
+                          >
+                            Laravel Fundamentals - Controllers
+                            <span class="badge badge-warning">00m</span>
+                          </a>
+                        </div>
+                        <div
+                          id="collapse-5"
+                          class="collapse"
+                          aria-labelledby="heading-5"
+                          data-parent="#curriculumAccordion"
+                        >
+                          <div class="card-body">
+                            <ul class="play-list">
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Creating
+                                  Controllers<span class="time">00:00</span></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Passing data<span
+                                    class="time"
+                                    >00:00</span
+                                  ></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Resources and
+                                  Controllers<span class="time">00:00</span></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="collapsed title"
+                            data-toggle="collapse"
+                            data-target="#collapse-6"
+                            aria-expanded="false"
+                          >
+                            Laravel Fundamentals - Views
+                            <span class="badge badge-warning">00m</span>
+                          </a>
+                        </div>
+                        <div
+                          id="collapse-6"
+                          class="collapse"
+                          aria-labelledby="heading-6"
+                          data-parent="#curriculumAccordion"
+                        >
+                          <div class="card-body">
+                            <ul class="play-list">
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Creating views and
+                                  custom method<span class="time"
+                                    >00:00</span
+                                  ></a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  ><i class="fas fa-play"></i>Passing data to
+                                  views<span class="time">00:00</span></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="pills-3"
+                  role="tabpanel"
+                  aria-labelledby="pills-3-tab"
+                >
+                  <div class="instructor-box">
+                    <div class="thumb">
+                      <img
+                        data-src="assets/img/instructors/627f9a5c31ed3.jpg"
+                        class="lazy"
+                        alt="Instructor"
+                      />
+                    </div>
+                    <div class="info">
+                      <h5>Jack Oram</h5>
+                      <span class="position d-block"
+                        >UI/UX Designer, Profilex</span
+                      >
+                      <div class="summernote-content">
+                        <p>
+                          <span
+                            style="
+                              font-family: 'Open Sans', Arial, sans-serif;
+                              text-align: justify;
+                              font-size: 18px;
+                            "
+                            >At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio. Nam libero tempore, cum soluta nobis est
+                            eligendi optio cumque nihil impedit quo minus id
+                            quod maxime placeat facere possimus, omnis voluptas
+                            assumenda est</span
+                          >
+                        </p>
+                        <p>
+                          <span
+                            style="
+                              font-family: 'Open Sans', Arial, sans-serif;
+                              text-align: justify;
+                              font-size: 18px;
+                            "
+                            ><br
+                          /></span>
+                        </p>
+                        <p>
+                          <span
+                            style="
+                              font-family: 'Open Sans', Arial, sans-serif;
+                              text-align: justify;
+                              font-size: 18px;
+                            "
+                            ><b>Specialities:</b></span
+                          >
+                        </p>
+                        <ul>
+                          <li
+                            style="
+                              font-style: inherit;
+                              font-weight: inherit;
+                              font-size: 18px;
+                              line-height: 28px;
+                            "
+                          >
+                            Lorem ipsum dolor sit amet,
+                          </li>
+                          <li
+                            style="
+                              font-style: inherit;
+                              font-weight: inherit;
+                              font-size: 18px;
+                              line-height: 28px;
+                            "
+                          >
+                            consectetuer adipiscing elit.
+                          </li>
+                          <li
+                            style="
+                              font-style: inherit;
+                              font-weight: inherit;
+                              font-size: 18px;
+                              line-height: 28px;
+                            "
+                          >
+                            Aliquam tincidunt mauris eu risus.
+                          </li>
+                          <li
+                            style="
+                              font-style: inherit;
+                              font-weight: inherit;
+                              font-size: 18px;
+                              line-height: 28px;
+                            "
+                          >
+                            Vestibulum auctor dapibus neque.
+                          </li>
+                        </ul>
+                        <p><br /></p>
+                      </div>
+
+                      <ul class="social-link">
+                        <li>
+                          <a href="http://example.com/" target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="http://example.com/" target="_blank"
+                            ><i class="fab fa-instagram"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="http://example.com/" target="_blank"
+                            ><i class="fab fa-facebook-f"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="pills-4"
+                  role="tabpanel"
+                  aria-labelledby="pills-4-tab"
+                >
+                  <div class="reviews-area">
+                    <a
+                      href="user/login?redirectPath=course_details"
+                      class="main-btn"
+                      >Login</a
+                    >
+
+                    <div class="reviews-list">
+                      <div class="reviews-item">
+                        <div class="thumb">
+                          <img
+                            data-src="assets/img/users/1636607574.png"
+                            class="lazy"
+                            alt="User"
+                          />
+                        </div>
+                        <div class="content">
+                          <div class="title-review">
+                            <div class="title">
+                              <h5>Saeed Mahmud</h5>
+                              <span class="date">May 16, 2022</span>
+                            </div>
+                            <ul class="rating user-rating">
+                              <li><i class="fas fa-star"></i></li>
+                              <li><i class="fas fa-star"></i></li>
+                              <li><i class="fas fa-star"></i></li>
+                              <li><i class="fas fa-star"></i></li>
+                              <li><i class="fas fa-star"></i></li>
+                            </ul>
+                          </div>
+                          <p>
+                            There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered alteration
+                            in some form, by injected humour, or randomised
+                            words which don&#039;t look even slightly believable
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center mt-30">
+                  <a
+                    href="https://www.radiofoorti.fm/"
+                    target="_blank"
+                    onclick="adView(13)"
+                  >
+                    <img
+                      data-src="assets/img/advertisements/6283b1916ce52.png"
+                      class="lazy"
+                      alt="advertisement"
+                      style="width: 728px; max-height: 90px; max-width: 100%"
                     />
-                    <link rel="stylesheet" href="css/font-awesome.css" />
-                    <link rel="stylesheet" href="css/bootstrap.css" />
-                    <link rel="stylesheet" href="css/styles.css" />
-                    <link rel="icon" href="images/favicon.png" />
-                    <title>Soran LMS</title>
-                </head>
-                <body id="home">
-                    <!---------------------------- Navigation ---------------------------->
-                    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-                        <div class="container">
-                            <a href="index.html" class="navbar-brand">
-                                <img src="images/soranbanner.png" alt="" width="50bit" />
-                            </a>
-                            <button
-                                class="navbar-toggler"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#navbarNavDropdown"
-                                aria-controls="navbarNavDropdown"
-                                aria-expanded="false"
-                                aria-label="Toggle navigation"
-                            >
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="#home"
-                                            >Home</a
-                                        >
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#discover">Discover</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#summary">Summary</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#takeaways">Takeaways</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#subscribe">Subscribe</a>
-                                    </li>
-                                </ul>
-                                <span class="nav-item">
-                                    <span class="fa-stack">
-                                        <a href="#">
-                                            <i class="fas fa-circle fa-stack-2x"></i>
-                                            <i
-                                                class="fab fa-facebook-f fa-stack-1x text-white"
-                                            ></i>
-                                        </a>
-                                    </span>
-                                </span>
-                                <span class="nav-item">
-                                    <span class="fa-stack">
-                                        <a href="#">
-                                            <i class="fas fa-circle fa-stack-2x"></i>
-                                            <i
-                                                class="fab fa-twitter fa-stack-1x text-white"
-                                            ></i>
-                                        </a>
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    </nav>
-
-                    <!---------------------------- Header ---------------------------->
-                    <!-- vh-100 wata barzyakay 100% heighte brasaraka dabet -->
-                    <header class="header py-7 vh-100">
-                        <div class="container">
-                            <div class="row mb-5 text-center">
-                                <div class="col-12 text-container">
-                                    <h1 class="display-2 text-white mt-3">
-                                        Lorem ipsum dolor sit amet
-                                    </h1>
-                                    <p class="lead text-white w-75 m-auto mb-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi voluptas libero rem aut. Saepe error quos vero ipsum esse? Aperiam, numquam. Nostrum perspiciatis, velit pariatur dignissimos debitis commodi laboriosam eos?
-                                    </p>
-                                    @if (Route::has('login'))
-                                    <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                                        @auth
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-                                        @else
-                                            <a href="{{ route('login') }}" class="btn btn-outline-light text-uppercase">Log in</a>
+        </div>
+      </div>
+    </section>
+    <!--====== COURSE DETAILS PART END ======-->
 
-                                            @if (Route::has('register'))
-                                                 <a
-                                                 href="{{ route('register') }}"
-                                                class="btn btn-primary text-uppercase"
-                                            >Register</a>
-                                            @endif
-                                        @endauth
-                                    </div>
-                                @endif
+    <div class="back-to-top">
+      <a href="#">
+        <i class="fal fa-chevron-double-up"></i>
+      </a>
+    </div>
 
+    <div class="js-cookie-consent cookie-consent">
+      <div class="container">
+        <div class="cookie-container">
+          <span class="cookie-consent__message">
+            <p>
+              We use cookies to give you the best online experience.<br />By
+              continuing to browse the site you are agreeing to our use of
+              cookies.
+            </p>
+          </span>
 
-                                </div>
-                            </div>
+          <button class="js-cookie-consent-agree cookie-consent__agree">
+            I Agree
+          </button>
+        </div>
+      </div>
+    </div>
 
-                            <div class="row">
-                                <div class="col-12">
-                                    <!-- Image Slider -->
-                                    <div
-                                        id="slider"
-                                        class="carousel slide"
-                                        data-bs-ride="carousel"
-                                    >
-                                        <div class="carousel-indicators">
-                                            <button
-                                                class="active"
-                                                type="button"
-                                                data-bs-slide-to="0"
-                                                data-bs-target="#slider"
-                                                aria-current="true"
-                                                aria-label="Slide 1"
-                                            ></button>
-                                            <button
-                                                type="button"
-                                                data-bs-slide-to="1"
-                                                data-bs-target="#slider"
-                                                aria-label="Slide 2"
-                                            ></button>
-                                            <button
-                                                type="button"
-                                                data-bs-slide-to="2"
-                                                data-bs-target="#slider"
-                                                aria-label="Slide 3"
-                                            ></button>
-                                        </div>
-                                        <div class="carousel-inner rounded-5">
-                                            <div class="carousel-item active">
-                                                <img
-                                                    src="images/header-slide-1.jpg"
-                                                    alt=""
-                                                    class="d-block w-100 rounded-5"
-                                                />
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img
-                                                    src="images/header-slide-2.jpg"
-                                                    alt=""
-                                                    class="d-block w-100 rounded-5"
-                                                />
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img
-                                                    src="images/header-slide-3.jpg"
-                                                    alt=""
-                                                    class="d-block w-100 rounded-5"
-                                                />
-                                            </div>
-                                        </div>
-                                        <!-- Buttons -->
-                                        <button
-                                            class="carousel-control-prev"
-                                            type="button"
-                                            data-bs-slide="prev"
-                                            data-bs-target="#slider"
-                                        >
-                                            <span class="carousel-control-prev-icon"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button
-                                            class="carousel-control-next"
-                                            type="button"
-                                            data-bs-slide="next"
-                                            data-bs-target="#slider"
-                                        >
-                                            <span class="carousel-control-next-icon"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+    <script>
+      "use strict";
+      window.laravelCookieConsent = (function () {
+        const COOKIE_VALUE = 1;
+        const COOKIE_DOMAIN = "course.ourprojects.link";
 
-                    <!---------------------------- Register ---------------------------->
-                    <section class="register bg-primary py-6 overflow-hidden">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam vero ducimus repudiandae ex nobis consequuntur possimus eveniet accusantium unde alias eius, praesentium dignissimos ea, ut optio vel neque tenetur.
-                                    </p>
+        function consentWithCookies() {
+          setCookie("laravel_cookie_consent", COOKIE_VALUE, 7300);
+          hideCookieDialog();
+        }
 
-                                    <!-- list-unstyled: bullet point nahele lagall default padding browser -->
-                                    <!-- vstack gap-3: bo dawa daman nawa space drust be lanewan li kan -->
-                                    <ul class="list-unstyled vstack gap-3">
-                                        <li>
-                                            <i class="fas fa-square"></i>
-                                            <strong>Gain Expertise:</strong> Our videos
-                                            provide in-depth insights and practical tips to
-                                            enhance your expertise in various domains.
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-square"></i>
-                                            <strong>Stay Updated:</strong> Stay up-to-date
-                                            with the latest industry trends and advancements
-                                            through our informative and up-to-date videos.
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-square"></i>
-                                            <strong>Expand Your Network:</strong> Connect
-                                            with like-minded individuals and industry
-                                            experts, fostering new connections and
-                                            opportunities.
-                                        </li>
-                                    </ul>
-                                </div>
+        function cookieExists(name) {
+          return (
+            document.cookie.split("; ").indexOf(name + "=" + COOKIE_VALUE) !==
+            -1
+          );
+        }
 
-                                <div class="col-lg-6 p-4">
-                                    <form>
-                                        <div class="my-4">
-                                            <input
-                                                type="text"
-                                                class="form-control form-control-lg rounded-0 border-0"
-                                                placeholder="Enter name"
-                                            />
-                                        </div>
-                                        <div class="my-4">
-                                            <input
-                                                type="email"
-                                                class="form-control form-control-lg rounded-0 border-0"
-                                                placeholder="Enter email"
-                                            />
-                                        </div>
-                                        <div class="my-4">
-                                            <input
-                                                type="text"
-                                                class="form-control form-control-lg rounded-0 border-0"
-                                                placeholder="Enter phone number"
-                                            />
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                type="checkbox"
-                                                class="form-check-input"
-                                                value=""
-                                            />
-                                            <label for="terms" class="form-check-label">
-                                                I agree to the terms and conditions
-                                            </label>
-                                        </div>
+        function hideCookieDialog() {
+          const dialogs = document.getElementsByClassName("js-cookie-consent");
 
-                                        <!-- d-grid: lera bo awaya block button drust bkain wata 12 colome dager bkat yan tawawe widthaka -->
-                                        <div class="d-grid mt-4">
-                                            <button class="btn btn-outline-dark">
-                                                Register
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+          for (let i = 0; i < dialogs.length; ++i) {
+            dialogs[i].style.display = "none";
+          }
+        }
 
-                    <!---------------------------- Details 1 ---------------------------->
+        function setCookie(name, value, expirationInDays) {
+          const date = new Date();
+          date.setTime(date.getTime() + expirationInDays * 24 * 60 * 60 * 1000);
+          document.cookie =
+            name +
+            "=" +
+            value +
+            ";expires=" +
+            date.toUTCString() +
+            ";domain=" +
+            COOKIE_DOMAIN +
+            ";path=/" +
+            "";
+        }
 
-                    <section id="discover" class="details py-6 bg-light">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <img
-                                        src="images/instructor.jpg"
-                                        alt=""
-                                        class="img-fluid rounded-5 mb-4"
-                                    />
-                                </div>
-                                <div
-                                    class="col-lg-6 d-flex flex-column justify-content-center"
-                                >
-                                    <h2>
-                                        Enhance Your Skills with Engaging Training Videos
-                                    </h2>
-                                    <p>
-                                        Our extensive collection of training videos is
-                                        designed to help you enhance your skills and excel
-                                        in your chosen field. Whether you're looking to
-                                        improve your technical expertise or develop
-                                        essential soft skills, our videos provide valuable
-                                        insights and practical knowledge.
-                                    </p>
-                                    <p>
-                                        With expert instructors and comprehensive content,
-                                        you'll gain the confidence and competence to tackle
-                                        challenges and achieve success.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+        if (cookieExists("laravel_cookie_consent")) {
+          hideCookieDialog();
+        }
 
-                    <!---------------------------- Points ---------------------------->
+        const buttons = document.getElementsByClassName(
+          "js-cookie-consent-agree"
+        );
 
-                    <section class="points pb-5">
-                        <div class="container">
-                            <div class="row text-center mb-5">
-                                <div class="col-md-8 offset-md-2">
-                                    <h2>
-                                        Unlock Your Potential with Engaging Training Videos
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="d-flex gap-3">
-                                        <div class="number">
-                                            <span
-                                                class="bg-primary py-2 px-4 fs-3 rounded-circle"
-                                            >
-                                                1
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <h3 class="fs-4">Enhance Your Skills</h3>
-                                            <p>
-                                                Our training videos provide comprehensive
-                                                insights and practical tips to help you
-                                                enhance your skills in various domains. From
-                                                technical expertise to soft skills, we've
-                                                got you covered.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="d-flex gap-3">
-                                        <div class="number">
-                                            <span
-                                                class="bg-primary py-2 px-4 fs-3 rounded-circle"
-                                                >2</span
-                                            >
-                                        </div>
-                                        <div>
-                                            <h3 class="fs-4">Stay Updated</h3>
-                                            <p>
-                                                Keep pace with the latest industry trends
-                                                and advancements through our informative and
-                                                up-to-date videos. Stay ahead of the curve
-                                                and broaden your knowledge.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+        for (let i = 0; i < buttons.length; ++i) {
+          buttons[i].addEventListener("click", consentWithCookies);
+        }
 
-                                <div class="col-md-6 mb-4">
-                                    <div class="d-flex gap-3">
-                                        <div class="number">
-                                            <span
-                                                class="bg-primary py-2 px-4 fs-3 rounded-circle"
-                                                >3</span
-                                            >
-                                        </div>
-                                        <div>
-                                            <h3 class="fs-4">Connect with Experts</h3>
-                                            <p>
-                                                Our platform allows you to connect with
-                                                like-minded individuals and industry
-                                                experts. Expand your network, foster new
-                                                connections, and unlock new opportunities.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+        return {
+          consentWithCookies: consentWithCookies,
+          hideCookieDialog: hideCookieDialog,
+        };
+      })();
+    </script>
 
-                                <div class="col-md-6 mb-4">
-                                    <div class="d-flex gap-3">
-                                        <div class="number">
-                                            <span
-                                                class="bg-primary py-2 px-4 fs-3 rounded-circle"
-                                                >4</span
-                                            >
-                                        </div>
-                                        <div>
-                                            <h3 class="fs-4">Flexible Learning</h3>
-                                            <p>
-                                                Our training videos are available on-demand,
-                                                allowing you to learn at your own pace and
-                                                convenience. Access the content anytime,
-                                                anywhere, and tailor your learning
-                                                experience.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-5">
+            <div class="footer-item about-footer-item mt-30">
+              <div class="footer-title">
+                <img
+                  data-src="assets/img/628368f29da9e.png"
+                  class="lazy"
+                  alt="website logo"
+                />
+              </div>
 
-                                <div class="col-md-6 mb-4">
-                                    <div class="d-flex gap-3">
-                                        <div class="number">
-                                            <span
-                                                class="bg-primary py-2 px-4 fs-3 rounded-circle"
-                                                >5</span
-                                            >
-                                        </div>
-                                        <div>
-                                            <h3 class="fs-4">Practical Knowledge</h3>
-                                            <p>
-                                                Gain practical knowledge and apply it
-                                                directly to real-world scenarios. Our videos
-                                                offer hands-on insights and practical tips
-                                                to help you succeed in your professional
-                                                endeavors.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+              <div class="about-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Possimus dignissimos quibusdam quia sit delectus. Cupiditate
+                  corporis, delectus quo ullam repudiandae illum culpa, magni
+                  modi, asperiores quis non magnam fugit vitae!
+                </p>
+              </div>
+            </div>
+          </div>
 
-                                <div class="col-md-6 mb-4">
-                                    <div class="d-flex gap-3">
-                                        <div class="number">
-                                            <span
-                                                class="bg-primary py-2 px-4 fs-3 rounded-circle"
-                                                >6</span
-                                            >
-                                        </div>
-                                        <div>
-                                            <h3 class="fs-4">Continuous Learning</h3>
-                                            <p>
-                                                Lifelong learning is key to personal and
-                                                professional growth. Explore a vast
-                                                collection of training videos and embark on
-                                                a journey of continuous learning and
-                                                self-improvement.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+          <div class="col-lg-4 col-md-7">
+            <div class="footer-item mt-30">
+              <div class="footer-title item-2">
+                <i class="fal fa-link"></i>
+                <h4 class="title">Useful Links</h4>
+              </div>
 
-                    <!---------------------------- Course Summary ---------------------------->
+              <div class="footer-list-area">
+                <div class="footer-list d-block d-sm-flex">
+                  <ul>
+                    <li>
+                      <a
+                        href="codecanyon.kreativdev.com/coursela/terms-&amp;-conditions"
+                        ><i class="fal fa-angle-right"></i> Terms &amp;
+                        Conditions</a
+                      >
+                    </li>
+                    <li>
+                      <a href="codecanyon.kreativdev.com/coursela/contact"
+                        ><i class="fal fa-angle-right"></i> Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://codecanyon.kreativdev.com/coursela/about"
+                        ><i class="fal fa-angle-right"></i> About Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                    <!-- m-auto margin auto wadakat bcheta nawand -->
-                    <section id="summary" class="summary bg-light mt-5 w-75 m-auto">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h2 class="text-center mb-5">Course Summary</h2>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="bg-white p-5">
-                                        <ul class="list-unstyled">
-                                            <li class="border-bottom pb-3">
-                                                <h5>1. Comprehensive Training</h5>
-                                                <p>
-                                                    Our courses provide comprehensive
-                                                    training in a wide range of topics. From
-                                                    beginner-level fundamentals to advanced
-                                                    concepts, we offer in-depth content to
-                                                    cater to learners of all levels.
-                                                </p>
-                                            </li>
-                                            <li class="border-bottom pb-3 pt-5">
-                                                <h5>2. Expert Instructors</h5>
-                                                <p>
-                                                    Learn from industry experts who bring
-                                                    years of experience and expertise to the
-                                                    table. Our instructors are passionate
-                                                    about sharing their knowledge and
-                                                    helping you succeed.
-                                                </p>
-                                            </li>
-                                            <li class="pb-3 pt-5">
-                                                <h5>3. Practical Application</h5>
-                                                <p>
-                                                    We believe in practical learning that
-                                                    goes beyond theory. Our courses focus on
-                                                    real-world application, equipping you
-                                                    with the skills and knowledge needed to
-                                                    excel in your field.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+          <div class="col-lg-4">
+            <div class="footer-item mt-30">
+              <div class="footer-title item-3">
+                <i class="fal fa-blog"></i>
+                <h4 class="title">Latest Blog</h4>
+              </div>
 
-                    <!---------------------------- Details 2 ---------------------------->
+              <div class="footer-instagram">
+                <div class="instagram-item">
+                  <div class="item mt-20 d-flex align-items-center">
+                    <div class="blog-img mr-4">
+                      <img
+                        data-src="assets/img/blogs/6280d0469ef47.jpg"
+                        class="lazy"
+                        alt="image"
+                      />
+                    </div>
 
-                    <section class="details py-6 bg-light">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <img
-                                        src="images/audience.jpg"
-                                        alt=""
-                                        class="img-fluid rounded-5 mb-4"
-                                    />
-                                </div>
-                                <div
-                                    class="col-lg-6 d-flex flex-column justify-content-center"
-                                >
-                                    <h2>
-                                        Elevate Your Learning Journey with Expert Seminars
-                                    </h2>
-                                    <p>
-                                        Join our expert-led seminars and unlock new
-                                        possibilities in your personal and professional
-                                        development. Our seminars cover a diverse range of
-                                        topics, from leadership and innovation to personal
-                                        growth and productivity.
-                                    </p>
-                                    <p>
-                                        Immerse yourself in engaging discussions,
-                                        interactive workshops, and valuable networking
-                                        opportunities.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <div class="blog-info">
+                      <h6 class="blog-title">
+                        <a href="blog/vestibulum-commodo-felis-quis-tortor."
+                          >Vestibulum commodo felis quis ...</a
+                        >
+                      </h6>
+                      <span class="mt-1">May 15, 2022</span>
+                    </div>
+                  </div>
+                  <div class="item mt-20 d-flex align-items-center">
+                    <div class="blog-img mr-4">
+                      <img
+                        data-src="assets/img/blogs/6280d0d0a5182.jpg"
+                        class="lazy"
+                        alt="image"
+                      />
+                    </div>
 
-                    <!---------------------------- Invitation ---------------------------->
+                    <div class="blog-info">
+                      <h6 class="blog-title">
+                        <a href="blog/vivamus-vestibulum-ntulla-nec-ante."
+                          >Vivamus vestibulum ntulla nec ...</a
+                        >
+                      </h6>
+                      <span class="mt-1">May 15, 2022</span>
+                    </div>
+                  </div>
+                  <div class="item mt-20 d-flex align-items-center">
+                    <div class="blog-img mr-4">
+                      <img
+                        data-src="assets/img/blogs/6280c8d9b530c.jpg"
+                        class="lazy"
+                        alt="image"
+                      />
+                    </div>
 
-                    <section class="invitation mb-5 bg-light">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="invitation-bg text-center py-6 rounded-5">
-                                        <div class="text-white w-75 m-auto">
-                                            <h2 class="display-5 fw-bold">
-                                                Join Us On December 22nd
-                                            </h2>
-                                            <p>
-                                                We cordially invite you to attend a seminar
-                                                on December 22nd, where we will explore
-                                                various topics and insights related to
-                                                <strong>advertising and marketing</strong>.
-                                                It will be an engaging session where you can
-                                                gain valuable knowledge about. Don't miss
-                                                out on this opportunity to enhance your
-                                                skills and broaden your horizons. Join us
-                                                and be a part of this enriching experience!
-                                            </p>
-                                            <a
-                                                href="#register"
-                                                class="btn btn-primary btn-lg"
-                                            >
-                                                Register Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <div class="blog-info">
+                      <h6 class="blog-title">
+                        <a
+                          href="blog/morbi-in-sem-quis-dui-placerat-ornare.-pellentesque-odio-nisi"
+                          >Morbi in sem quis dui placerat...</a
+                        >
+                      </h6>
+                      <span class="mt-1">May 15, 2022</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                    <!---------------------------- Takeaways ---------------------------->
-                    <section id="takeaways" class="takeaways my-5 bg-light">
-                        <div class="container">
-                            <div class="row text-center mb-5">
-                                <div class="col-md-8 offset-md-2">
-                                    <h2>Key Takeaways</h2>
-                                    <p class="lead">
-                                        Here are some of the takeaways and benefits you can
-                                        expect from our programs.
-                                    </p>
-                                </div>
-                            </div>
+        <div class="row border-top text-center pt-5">
+          <div class="col">
+            <p class="text-light">Copyright ©2022. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-                            <!-- Row 1 -->
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card mb-4 rounded-0 border-0 p-3">
-                                        <div class="card-body text-center">
-                                            <i
-                                                class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                            ></i>
-                                            <h5 class="card-title">Scientific Insights</h5>
-                                            <p class="card-text">
-                                                Explore the latest scientific research and
-                                                gain valuable insights into various
-                                                subjects, from physics to biology.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+    <script>
+      "use strict";
+      const baseURL = "/";
+      const vapid_public_key = "";
+      const langDir = 0;
+    </script>
 
-                                <div class="col-md-4">
-                                    <div class="card mb-4 rounded-0 border-0 p-3">
-                                        <div class="card-body text-center">
-                                            <i
-                                                class="fas fa-key fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                            ></i>
-                                            <h5 class="card-title">
-                                                Cybersecurity Awareness
-                                            </h5>
-                                            <p class="card-text">
-                                                Discover the importance of cybersecurity and
-                                                learn how to protect yourself and your
-                                                digital assets from cyber threats.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery-1.12.4.min.js"
+    ></script>
 
-                                <div class="col-md-4">
-                                    <div class="card mb-4 rounded-0 border-0 p-3">
-                                        <div class="card-body text-center">
-                                            <i
-                                                class="fas fa-newspaper fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                            ></i>
-                                            <h5 class="card-title">Industry Updates</h5>
-                                            <p class="card-text">
-                                                Stay informed about the latest news and
-                                                updates in your industry, keeping you ahead
-                                                of the curve and facilitating professional
-                                                growth.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+    <script
+      type="text/javascript"
+      src="assets/js/modernizr-3.6.0.min.js"
+    ></script>
 
-                                <!-- Second Row -->
-                                <div class="col-md-4">
-                                    <div class="card mb-4 rounded-0 border-0 p-3">
-                                        <div class="card-body text-center">
-                                            <i
-                                                class="fas fa-users fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                            ></i>
-                                            <h5 class="card-title">
-                                                Collaborative Networking
-                                            </h5>
-                                            <p class="card-text">
-                                                Connect with professionals from diverse
-                                                backgrounds and industries to foster
-                                                collaboration and expand your professional
-                                                network.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
 
-                                <div class="col-md-4">
-                                    <div class="card mb-4 rounded-0 border-0 p-3">
-                                        <div class="card-body text-center">
-                                            <i
-                                                class="fas fa-handshake fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                            ></i>
-                                            <h5 class="card-title">
-                                                Partnership Opportunities
-                                            </h5>
-                                            <p class="card-text">
-                                                Discover potential partnership opportunities
-                                                with like-minded individuals and
-                                                organizations, opening doors to new
-                                                collaborations and ventures.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
-                                <div class="col-md-4">
-                                    <div class="card mb-4 rounded-0 border-0 p-3">
-                                        <div class="card-body text-center">
-                                            <i
-                                                class="fas fa-chart-bar fa-3x text-primary bg-light rounded-circle p-3 my-4"
-                                            ></i>
-                                            <h5 class="card-title">Data-driven Insights</h5>
-                                            <p class="card-text">
-                                                Leverage data analytics to gain valuable
-                                                insights and make informed decisions,
-                                                unlocking new possibilities for growth and
-                                                success.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
 
-                    <!---------------------------- Subscribe Form ---------------------------->
-                    <section id="subscribe" class="subscribe my-5">
-                        <div class="container">
-                            <div class="row">
-                                <!-- am coloma la medium basarawa 6 colom wardagre u dacheta nawandesh bahoy offset-md-3 chunka dalle la mediumawa 3 colom lay chap u 3 colome rast batall bka -->
-                                <div class="col-md-6 offset-md-3 text-center">
-                                    <h2>
-                                        Subscribe to our email list and get updates from the
-                                        experts
-                                    </h2>
-                                    <form>
-                                        <div class="my-4">
-                                            <input
-                                                type="email"
-                                                class="form-control form-control-lg"
-                                                placeholder="Enter email"
-                                            />
-                                            <div class="form-text">
-                                                We will never share your email address
-                                            </div>
-                                        </div>
-                                        <!-- d-grid bo awaya buttonaka 12 colom dager kat yan bllen waku block elemente lebet -->
-                                        <div class="d-grid">
-                                            <button class="btn btn-primary">
-                                                Subscribe
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+    <script
+      type="text/javascript"
+      src="assets/js/isotope-pkgd-3.0.6.min.js"
+    ></script>
 
-                    <!---------------------------- Footer ---------------------------->
-                    <footer class="footer mt-4 text-bg-dark py-5">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h5>Lorem Ipsum</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                                        elit. Eos possimus aliquid omnis commodi.
-                                        Dignissimos, quam obcaecati? Fugit non ex
-                                        repellendus?
-                                    </p>
-                                </div>
-                                <div class="col-md-4">
-                                    <h3>Quick Links</h3>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#home">Home</a></li>
-                                        <li><a href="#discover">Discover</a></li>
-                                        <li><a href="#summary">Summary</a></li>
-                                        <li><a href="#takeaways">Takeaways</a></li>
-                                        <li><a href="#subscribe">Subscribe</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <h5>Connect</h5>
-                                    <div class="d-flex gap-3">
-                                        <a href="#"
-                                            ><i class="fab fa-facebook fa-3x text-white"></i
-                                        ></a>
-                                        <a href="#"
-                                            ><i class="fab fa-twitter fa-3x text-white"></i
-                                        ></a>
-                                        <a href="#"
-                                            ><i class="fab fa-linkedin fa-3x text-white"></i
-                                        ></a>
-                                        <a href="#"
-                                            ><i
-                                                class="fab fa-instagram fa-3x text-white"
-                                            ></i
-                                        ></a>
-                                        <a href="#"
-                                            ><i class="fab fa-youtube fa-3x text-white"></i
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+    <script
+      type="text/javascript"
+      src="assets/js/imagesloaded.pkgd.min.js"
+    ></script>
 
-                    <script src="js/bootstrap.bundle.min.js"></script>
-                    <script src="js/script.js"></script>
-                </body>
-            </html>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.magnific-popup.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/owl-carousel.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.nice-select.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/wow.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.counterup.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/toastr.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/datatables-1.10.23.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/datatables.bootstrap4.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/highlight.pack.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery-syotimer.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/vanilla-lazyload.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/push-notification.js"
+    ></script>
+
+    <script>
+      "use strict";
+      let courseId = 12;
+    </script>
+
+    <script src="assets/js/stripe.js"></script>
+    <script type="text/javascript" src="assets/js/course-details.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

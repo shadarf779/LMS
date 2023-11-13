@@ -416,6 +416,7 @@
         </div>
     </div>
 </section>
+
         <!---------------------------- Details 1 ---------------------------->
 
         <section id="discover" class="details py-6 bg-light">
