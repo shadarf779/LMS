@@ -1,0 +1,10 @@
+#navbarNavDropdown{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#navbarNavDropdown span{
+    position: relative !important;
+    top: -0.6rem;
+}
