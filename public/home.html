@@ -14,6 +14,136 @@
         <link rel="stylesheet" href="css/bootstrap.css" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="icon" href="images/favicon.png" />
+        <!------------------------------------------------ Iconscout CSS ------------------------------------------------>
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
+        <style>
+            /* ===== Google Font Import - Poppins ===== */
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            :root {
+                /* ===== Colors ===== */
+                --primary-color: #0e4bf1;
+                --panel-color: #fff;
+                --text-color: #000;
+                --black-light-color: #707070;
+                --border-color: #e6e5e5;
+                --toggle-color: #ddd;
+                --box1-color: #4da3ff;
+                --box2-color: #ffe6ac;
+                --box3-color: #e7d1fc;
+                --title-icon-color: #fff;
+
+                /* ====== Transition ====== */
+                /*
+
+transition: Specifies how CSS property changes are animated over time.
+
+all: Applies the transition effect to all CSS properties of the element.
+
+0.2s: Sets the duration of the transition to 0.2 seconds for smooth animation.
+
+ease: Determines the timing function for the animation, creating a smooth and natural effect.
+
+transition-delay: Adds seconds delay before the transition effect begins.
+transition: property duration timing-function delay;
+
+
+  */
+
+                --tran-05: all 0.5s ease;
+                --tran-03: all 0.3s ease;
+                --tran-03: all 0.2s ease;
+            }
+            /* === Custom Scroll Bar CSS === */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: var(--primary-color);
+                border-radius: 12px;
+                transition: all 0.3s ease;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #0b3cc1;
+            }
+
+            .title {
+                display: flex;
+                align-items: center;
+                margin: 60px 0 30px 0;
+            }
+            .title i {
+                position: relative;
+                height: 35px;
+                width: 35px;
+                background-color: var(--primary-color);
+                border-radius: 6px;
+                color: var(--title-icon-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+            }
+            .title .text {
+                font-size: 24px;
+                font-weight: 500;
+                color: var(--text-color);
+                margin-left: 10px;
+            }
+
+            .activity {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .activity .activity-data {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            .activity .activity-data {
+                display: flex;
+            }
+            .activity-data .data {
+                display: flex;
+                flex-direction: column;
+                margin: 0 15px;
+            }
+            .activity-data .data-title {
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--text-color);
+            }
+            .activity-data .data .data-list {
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 20px;
+                white-space: nowrap;
+                color: var(--text-color);
+            }
+
+            @media (max-width: 1000px) {
+                .activity .activity-data {
+                    overflow-x: scroll;
+                }
+            }
+        </style>
         <title>Soran LMS</title>
     </head>
     <body id="home">
@@ -269,6 +399,66 @@
             </div>
         </section>
 
+        <!---------------------------- Course Table  ---------------------------->
+        <div class="activity">
+            <div class="title">
+                <i class="uil uil-clock-three"></i>
+                <span class="text">Recent Course</span>
+            </div>
+
+            <div class="activity-data">
+                <div class="data names">
+                    <span class="data-title">Name</span>
+                    <span class="data-list">Prem Shahi</span>
+                    <span class="data-list">Deepa Chand</span>
+                    <span class="data-list">Manisha Chand</span>
+                    <span class="data-list">Pratima Shahi</span>
+                    <span class="data-list">Man Shahi</span>
+                    <span class="data-list">Ganesh Chand</span>
+                    <span class="data-list">Bikash Chand</span>
+                </div>
+                <div class="data email">
+                    <span class="data-title">Email</span>
+                    <span class="data-list">premshahi@gmail.com</span>
+                    <span class="data-list">deepachand@gmail.com</span>
+                    <span class="data-list">prakashhai@gmail.com</span>
+                    <span class="data-list">manishachand@gmail.com</span>
+                    <span class="data-list">pratimashhai@gmail.com</span>
+                    <span class="data-list">manshahi@gmail.com</span>
+                    <span class="data-list">ganeshchand@gmail.com</span>
+                </div>
+                <div class="data joined">
+                    <span class="data-title">Joined</span>
+                    <span class="data-list">2022-02-12</span>
+                    <span class="data-list">2022-02-12</span>
+                    <span class="data-list">2022-02-13</span>
+                    <span class="data-list">2022-02-13</span>
+                    <span class="data-list">2022-02-14</span>
+                    <span class="data-list">2022-02-14</span>
+                    <span class="data-list">2022-02-15</span>
+                </div>
+                <div class="data type">
+                    <span class="data-title">Type</span>
+                    <span class="data-list">New</span>
+                    <span class="data-list">Member</span>
+                    <span class="data-list">Member</span>
+                    <span class="data-list">New</span>
+                    <span class="data-list">Member</span>
+                    <span class="data-list">New</span>
+                    <span class="data-list">Member</span>
+                </div>
+                <div class="data status">
+                    <span class="data-title">Status</span>
+                    <span class="data-list">Liked</span>
+                    <span class="data-list">Liked</span>
+                    <span class="data-list">Liked</span>
+                    <span class="data-list">Liked</span>
+                    <span class="data-list">Liked</span>
+                    <span class="data-list">Liked</span>
+                    <span class="data-list">Liked</span>
+                </div>
+            </div>
+        </div>
         <!---------------------------- Details 1 ---------------------------->
 
         <section id="discover" class="details py-6 bg-light">
