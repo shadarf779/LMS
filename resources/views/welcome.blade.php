@@ -1,14 +1,30 @@
 <x-layout>
 
-         <!---------------------------- Takeaways ---------------------------->
-         @if ($posts->count())
-         <x-posts-grid :posts="$posts" />
 
-         {{ $posts->links() }}
+         <!---------------------------- Takeaways ---------------------------->
+         <section id="activity" class="takeaways my-5 bg-light">
+
+
+         <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-md-8 offset-md-2">
+                    <h2>Our Activity</h2>
+                    <p class="lead">
+                        Here our activity in Soran Universty you can join
+                    </p>
+                </div>
+            </div>
+            @if ($activites->count())
+
+
+         <x-ActivityCard :activites="$activites" />
+         {{ $activites->links('pagination::bootstrap-5') }}
+
      @else
          <p class="text-center">No posts yet. Please check back later.</p>
      @endif
-
+    </div>
+</section>
    <!--    ---------------------------- Course Table  -------------------------- -->
    @auth
         <div class="activity">

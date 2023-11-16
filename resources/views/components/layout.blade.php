@@ -45,13 +45,13 @@
                             >
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#activity">activity</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#discover">Discover</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#summary">Summary</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#takeaways">Takeaways</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#subscribe">Subscribe</a>
@@ -91,7 +91,7 @@
                             Soran Universty
                         </h1>
                         <p class="lead text-white w-75 m-auto mb-4">
-                            Here Our Soran Universty Activty
+                            Here Our Soran Universty activity
                         </p>
                         @if (Route::has('login'))
                         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">

@@ -6,13 +6,15 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
 
 use App\Http\Controllers\SessionController;
-
+use App\Models\Activites;
 use Illuminate\Support\Facades\Route;
 
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+               'activites' => Activites::latest()->paginate(6)->withQueryString()
+    ]);
 });
 
 
