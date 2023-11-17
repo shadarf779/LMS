@@ -12,12 +12,18 @@
                                 <i
                                     class="fas fa-atom fa-3x text-primary bg-light rounded-circle p-3 my-4"
                                 ></i>
-                                <h5 class="card-title">Scientific Insights</h5>
-                                <p class="card-text">
-                                    Explore the latest scientific research and
-                                    gain valuable insights into various
-                                    subjects, from physics to biology.
+                                <h5 class="card-title">{{$post->name}}</h5>
+                                <p class="card-text">{{$post->descrition}}
                                 </p>
+                                <span class="mt-2 block text-gray-400 text-xs">
+                                    Published <time>{{ $post->created_at->diffForHumans() }}</time>
+                                </span><br>
+                                <a
+                                href="/Activites/{{ $post->id }}"
+                                class="btn btn-primary btn"
+                            >
+                                Enroll NOW
+                            </a>
                             </div>
                         </div>
                     </div>

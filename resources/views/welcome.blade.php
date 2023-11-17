@@ -56,6 +56,9 @@
                 </div>
             </div>
         </div>
+
+        <p class="text-center">No posts yet. Please check back later.</p>
+ 
         @endauth
         <!---------------------------- Details 1 ---------------------------->
 

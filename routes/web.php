@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\activites as ControllersActivites;
 use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\RegisterController;
@@ -19,6 +19,11 @@ Route::get('/', function () {
 
 
 
+Route::get('Activites/{post:id}',function ($Activites) {
+    return view('show', [
+        'activites' => $Activites
+    ]);
+});
 
 
 
@@ -28,6 +33,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('welcome');
+        return view('welcome', [
+            'activites' => Activites::latest()->paginate(6)->withQueryString()
+ ]);
     })->name('welcome');
 });
