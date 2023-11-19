@@ -17,6 +17,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/', function () {
+    return view('user.welcome', [
+               'activites' => Activites::latest()->paginate(6)->withQueryString()
+    ]);
+});
+
 
 Route::get('Activites/{activites}', function ($id) {
 
@@ -36,7 +42,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('welcome', [
+        return view('user.welcome', [
             'activites' => Activites::latest()->paginate(6)->withQueryString()
  ]);
     })->name('welcome');

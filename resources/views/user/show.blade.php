@@ -884,7 +884,7 @@
                                 </div>
                                @auth
                                <a
-                               href="/Activites/"
+                               href="/Active/{{ $activites->id }}"
                                class="btn btn-primary btn"
                            >
                                Enroll NOW
