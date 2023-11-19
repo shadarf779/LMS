@@ -1,4 +1,4 @@
-@props(['activites'])
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -177,10 +177,10 @@
                                                 aria-controls="pills-1"
                                                 aria-selected="true"
                                                 ><i class="fal fa-list"></i>
-                                                Description</a
+                                                {{$activites->name}}</a
                                             >
                                         </li>
-                                        <li class="nav-item">
+                                        {{-- <li class="nav-item">
                                             <a
                                                 class="nav-link"
                                                 id="pills-2-tab"
@@ -218,7 +218,7 @@
                                                 ><i class="fal fa-stars"></i>
                                                 Reviews</a
                                             >
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -240,10 +240,9 @@
                                                         text-align: justify;
                                                         font-size: 18px;
                                                     "
-                                                    @dd('activites');
-                                                    >{{$activites->descrition}}</span
-                                                >
+                                                    >{{$activites->descrition}}</span>
                                             </p>
+
                                             <p style="line-height: 1.6">
                                                 <span
                                                     style="
@@ -252,19 +251,11 @@
                                                         text-align: justify;
                                                         font-size: 18px;
                                                     "
-                                                    >{{$activites->descrition}}</span
+                                                    ><span
+                                                        style="font-weight: 600"
+                                                        >start Date :</span
+                                                    >{{$activites->date}}</span
                                                 >
-                                            </p>
-                                            <p style="line-height: 1.6">
-                                                <span
-                                                    style="
-                                                        font-family: 'Open Sans',
-                                                            Arial, sans-serif;
-                                                        text-align: justify;
-                                                        font-size: 18px;
-                                                    "
-                                                    ><br
-                                                /></span>
                                             </p>
                                             <p style="line-height: 1.6">
                                                 <span
@@ -276,287 +267,38 @@
                                                     "
                                                     ><span
                                                         style="font-weight: 600"
-                                                        >Requirements:</span
-                                                    ></span
+                                                        >Location: </span
+                                                    >:{{$activites->location}}</span
                                                 >
                                             </p>
-                                            <ul>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Lorem ipsum dolor sit amet,
-                                                    consectetuer adipiscing
-                                                    elit.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Aliquam tincidunt mauris eu
-                                                    risus.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Vestibulum auctor dapibus
-                                                    neque.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Nunc dignissim risus id
-                                                    metus.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Cras ornare tristique elit.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Vivamus vestibulum ntulla
-                                                    nec ante
-                                                </li>
-                                            </ul>
-                                            <p
-                                                style="
-                                                    font-size: 18px;
-                                                    line-height: 1;
-                                                    font-style: inherit;
-                                                    font-family: stolzl,
-                                                        sans-serif;
-                                                "
-                                            >
-                                                <span style="font-weight: 600"
-                                                    >What this couse
-                                                    covers:</span
-                                                >
-                                            </p>
-                                            <ul>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 1;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    <span
-                                                        style="
-                                                            font-style: inherit;
-                                                            font-weight: inherit;
-                                                        "
-                                                        >Vestibulum auctor
-                                                        dapibus neque.</span
-                                                    >
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Nunc dignissim risus id
-                                                    metus.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Cras ornare tristique elit.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Vivamus vestibulum ntulla
-                                                    nec ante
-                                                </li>
-                                            </ul>
-                                            <p
-                                                style="
-                                                    font-size: 18px;
-                                                    line-height: 28px;
-                                                    font-style: inherit;
-                                                    font-weight: inherit;
-                                                    font-family: stolzl,
-                                                        sans-serif;
-                                                "
-                                            >
+                                            <p style="line-height: 1.6">
                                                 <span
                                                     style="
                                                         font-family: 'Open Sans',
                                                             Arial, sans-serif;
                                                         text-align: justify;
+                                                        font-size: 18px;
                                                     "
-                                                    >consectetur, adipisci
-                                                    velit, sed quia non numquam
-                                                    eius modi tempora incidunt
-                                                    ut labore et dolore magnam
-                                                    aliquam quaerat voluptatem.
-                                                    Ut enim ad minima veniam,
-                                                    quis nostrum exercitationem
-                                                    ullam corporis suscipit
-                                                    laboriosam, nisi ut aliquid
-                                                    ex ea commodi consequatur?
-                                                    Quis autem vel eum iure
-                                                    reprehenderit qui in ea
-                                                    voluptate velit esse quam
-                                                    nihil molestiae consequatur,
-                                                    vel illum qui dolorem eum
-                                                    fugiat quo voluptas nulla
-                                                    pariatur</span
+                                                    ><span
+                                                        style="font-weight: 600"
+                                                        >Max Partcipants:</span
+                                                    >{{$activites->MaxPartcipants}}</span
                                                 >
                                             </p>
-                                            <p
-                                                style="
-                                                    font-size: 18px;
-                                                    line-height: 28px;
-                                                    font-style: inherit;
-                                                    font-weight: inherit;
-                                                    font-family: stolzl,
-                                                        sans-serif;
-                                                "
-                                            >
+                                            <p style="line-height: 1.6">
                                                 <span
                                                     style="
                                                         font-family: 'Open Sans',
                                                             Arial, sans-serif;
                                                         text-align: justify;
+                                                        font-size: 18px;
                                                     "
-                                                    ><br
-                                                /></span>
-                                            </p>
-                                            <p
-                                                style="
-                                                    font-size: 18px;
-                                                    line-height: 1;
-                                                    font-style: inherit;
-                                                    font-family: stolzl,
-                                                        sans-serif;
-                                                "
-                                            >
-                                                <span style="font-weight: 600"
-                                                    >What will you learn:</span
+                                                    ><span
+                                                        style="font-weight: 600"
+                                                        >Dead Line of submition :</span
+                                                    >{{$activites->deadline}}</span
                                                 >
                                             </p>
-                                            <ul>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 1;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    <span
-                                                        style="
-                                                            font-style: inherit;
-                                                            font-weight: inherit;
-                                                        "
-                                                        >Vestibulum auctor
-                                                        dapibus neque.</span
-                                                    >
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Nunc dignissim risus id
-                                                    metus.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Cras ornare tristique elit.
-                                                </li>
-                                                <li
-                                                    style="
-                                                        font-style: inherit;
-                                                        font-weight: inherit;
-                                                        font-size: 18px;
-                                                        line-height: 28px;
-                                                        font-family: stolzl,
-                                                            sans-serif;
-                                                    "
-                                                >
-                                                    Vivamus vestibulum ntulla
-                                                    nec ante
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -1140,25 +882,12 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="text-center mt-30">
-                                    <a
-                                        href="https://www.radiofoorti.fm/"
-                                        target="_blank"
-                                        onclick="adView(13)"
-                                    >
-                                        <img
-                                            data-src="/assets/img/advertisements/6283b1916ce52.png"
-                                            class="lazy"
-                                            alt="advertisement"
-                                            style="
-                                                width: 728px;
-                                                max-height: 90px;
-                                                max-width: 100%;
-                                            "
-                                        />
-                                    </a>
-                                </div>
+                                <a
+                                href="/Activites/"
+                                class="btn btn-primary btn"
+                            >
+                                Enroll NOW
+                            </a>
                             </div>
                         </div>
                     </div>

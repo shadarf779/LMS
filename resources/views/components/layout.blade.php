@@ -23,7 +23,7 @@
         <!---------------------------- Navigation ---------------------------->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
             <div class="container">
-                <a href="index.html" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="images/soranbanner.png" alt="" width="50bit" />
                 </a>
                 <button

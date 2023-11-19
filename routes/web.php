@@ -12,18 +12,21 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome', [
+    return view('user.welcome', [
                'activites' => Activites::latest()->paginate(6)->withQueryString()
     ]);
 });
 
 
+Route::get('Activites/{activites}', function ($id) {
 
-Route::get('Activites/{post:id}',function ($Activites) {
-    return view('show', [
-        'activites' => $Activites
+    $activites = Activites::findOrFail($id); // Assuming you are fetching the Activites model by its ID
+    return view('user.show', [
+        'activites' => $activites
     ]);
 });
+
+
 
 
 
