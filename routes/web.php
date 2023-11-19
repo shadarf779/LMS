@@ -8,6 +8,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Models\Activites;
 use Illuminate\Support\Facades\Route;
+use App\Models\useractivereg;
+use Illuminate\Support\Facades\Auth;
+
 
 
 
@@ -20,10 +23,18 @@ Route::get('/', function () {
 
 
 Route::get('Enrol/{activites}', function ($id) {
+    $userActivities = UserActiveReg::all();
 
-    
+    $attributes = [
+        'UserID' => auth::id(), // Use Auth::id() to get the authenticated user's ID
+        'ActivityID' => $id,
+        'Status'=>'pending'
+    ];
 
-    return redirect('/#home');
+    $user = UserActiveReg::create($attributes);
+
+
+    return redirect('/')->with('success', 'Your account has been created.');
 });
 Route::get('Activites/{activites}', function ($id) {
 
