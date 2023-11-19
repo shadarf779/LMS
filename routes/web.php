@@ -17,13 +17,14 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/', function () {
-    return view('user.welcome', [
-               'activites' => Activites::latest()->paginate(6)->withQueryString()
-    ]);
+
+
+Route::get('Enrol/{activites}', function ($id) {
+
+    
+
+    return redirect('/#home');
 });
-
-
 Route::get('Activites/{activites}', function ($id) {
 
     $activites = Activites::findOrFail($id); // Assuming you are fetching the Activites model by its ID
