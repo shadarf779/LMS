@@ -882,12 +882,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a
-                                href="/Activites/"
-                                class="btn btn-primary btn"
-                            >
-                                Enroll NOW
-                            </a>
+                               @auth
+                               <a
+                               href="/Activites/"
+                               class="btn btn-primary btn"
+                           >
+                               Enroll NOW
+                           </a>
+                           @else
+                           <p >
+                            <b>first you must <a href="/register">sign up</a> or <a href="/login">Login</a></b>
+                           </p>
+                               @endauth
                             </div>
                         </div>
                     </div>
