@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('registerRequest', function (Blueprint $table) {
+        Schema::create('registerrequests', function (Blueprint $table) {
             $table->id();
             $table->string('userID');
             $table->string('avtivityID');
-            $table->string('RequstDate');
             $table->string('status');
-            $table->string('AdminAproval');
+            $table->string('AdminAproval')->default('Pending');
+            
             $table->timestamps();
         });
     }
