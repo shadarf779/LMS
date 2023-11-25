@@ -37,50 +37,47 @@
                 <div class="data names">
                     <span class="data-title">Name</span>
                     @if ($registerrequest->count() >= 1)
-
-                    @foreach ($registerrequest as $post)
-
-                        <span class="text">{{$post->userID}}</span>
-
+                    @foreach ($registerrequest as $request)
+                        @foreach ($request->activity as $activity)
+                            <span class="text">{{ $activity->name }}</span>
+                        @endforeach
                     @endforeach
-                    @endif
+                @endif
 
                 </div>
                 <div class="data email">
                     <span class="data-title">Email</span>
                     @if ($registerrequest->count() >= 1)
-
-                    @foreach ($registerrequest as $post)
-
-                        <span class="text">{{$post->userID}}</span>
-
+                    @foreach ($registerrequest as $request)
+                        @foreach ($request->activity as $activity)
+                            <span class="text">{{ $activity->deadline }}</span>
+                        @endforeach
                     @endforeach
-                    @endif
-
+                @endif
 
                 </div>
                 <div class="data joined">
-                    <span class="data-title">Joined</span>
+                    <span class="data-title">date</span>
                     @if ($registerrequest->count() >= 1)
-
-                    @foreach ($registerrequest as $post)
-
-                        <span class="text">{{$post->userID}}</span>
-
+                    @foreach ($registerrequest as $request)
+                    @foreach ($request->activity as $activity)
+                            <span class="text">{{ $activity->date }}</span>
+                        @endforeach
                     @endforeach
-                    @endif
+                @endif
+
 
                 </div>
                 <div class="data type">
-                    <span class="data-title">Type</span>
+                    <span class="data-title">Location</span>
                     @if ($registerrequest->count() >= 1)
-
-                    @foreach ($activites as $post)
-                        @dd($post->registerrequest);
-                        <span class="text">{{$post->registerrequest->name}}</span>
-
+                    @foreach ($registerrequest as $request)
+                    @foreach ($request->activity as $activity)
+                            <span class="text">{{ $activity->location }}</span>
+                        @endforeach
                     @endforeach
-                    @endif
+                @endif
+
 
                 </div>
                 <div class="data status">

@@ -12,11 +12,12 @@ class registerrequest extends Model
 
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class, 'id');
     }
 
-    public function active()
+    public function activity()
     {
-        return $this->hasMany(Activites::class);
+        return $this->hasMany(Activites::class, 'id');
     }
+
 }

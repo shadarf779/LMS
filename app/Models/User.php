@@ -61,6 +61,6 @@ class User extends Authenticatable
 
     public function registerrequest()
     {
-        return $this->hasMany(registerrequest::class);
+        return $this->hasMany(registerrequest::class, 'user_id');
     }
 }
