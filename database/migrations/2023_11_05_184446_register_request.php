@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('registerrequests', function (Blueprint $table) {
             $table->id();
-            $table->string('userID');
-            $table->string('avtivityID');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('activites_id')->constrained();
             $table->string('status');
             $table->string('AdminAproval')->default('Pending');
-            
+
             $table->timestamps();
         });
     }

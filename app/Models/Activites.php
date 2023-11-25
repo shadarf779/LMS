@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Activites extends Model
 {
     use HasFactory;
+
+    public function registerrequest()
+    {
+        return $this->hasMany(registerrequest::class);
+    }
 }

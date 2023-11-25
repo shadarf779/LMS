@@ -21,7 +21,7 @@
          {{ $activites->links('pagination::bootstrap-5') }}
 
      @else
-         <p class="text-center">No posts yet. Please check back later.</p>
+         <p class="text-center">You Dont have any Activity.</p>
      @endif
     </div>
 </section>
@@ -36,29 +36,74 @@
             <div class="activity-data">
                 <div class="data names">
                     <span class="data-title">Name</span>
+                    @if ($registerrequest->count() >= 1)
+
+                    @foreach ($registerrequest as $post)
+
+                        <span class="text">{{$post->userID}}</span>
+
+                    @endforeach
+                    @endif
 
                 </div>
                 <div class="data email">
                     <span class="data-title">Email</span>
+                    @if ($registerrequest->count() >= 1)
+
+                    @foreach ($registerrequest as $post)
+
+                        <span class="text">{{$post->userID}}</span>
+
+                    @endforeach
+                    @endif
+
 
                 </div>
                 <div class="data joined">
                     <span class="data-title">Joined</span>
+                    @if ($registerrequest->count() >= 1)
+
+                    @foreach ($registerrequest as $post)
+
+                        <span class="text">{{$post->userID}}</span>
+
+                    @endforeach
+                    @endif
 
                 </div>
                 <div class="data type">
                     <span class="data-title">Type</span>
+                    @if ($registerrequest->count() >= 1)
+
+                    @foreach ($activites as $post)
+                        @dd($post->registerrequest);
+                        <span class="text">{{$post->registerrequest->name}}</span>
+
+                    @endforeach
+                    @endif
 
                 </div>
                 <div class="data status">
                     <span class="data-title">Status</span>
+                    @if ($registerrequest->count() >= 1)
+
+                    @foreach ($registerrequest as $post)
+
+                        <span class="text">{{$post->status}}</span>
+
+                    @endforeach
+                    @endif
+
 
                 </div>
             </div>
         </div>
+        @if ($registerrequest->count() < 1)
 
-        <p class="text-center">No posts yet. Please check back later.</p>
- 
+        <p class="text-center">You Dont have any Activity.</p>
+        @endif
+
+
         @endauth
         <!---------------------------- Details 1 ---------------------------->
 

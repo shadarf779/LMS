@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('user.welcome', [
-               'activites' => Activites::latest()->paginate(6)->withQueryString()
+        'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => registerrequest::all()
+
     ]);
 });
 
@@ -25,8 +27,8 @@ Route::get('/', function () {
 Route::get('Enrol/{activites}', function ($id) {
 
     $attributes = [
-        'UserID' => auth::id(), // Use Auth::id() to get the authenticated user's ID
-        'avtivityID' => $id,
+        'user_id' => auth::id(), // Use Auth::id() to get the authenticated user's ID
+        'activites_id' => $id,
         'Status'=>'pending'
     ];
 
@@ -54,7 +56,9 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('user.welcome', [
-            'activites' => Activites::latest()->paginate(6)->withQueryString()
+            'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => registerrequest::all()
+
  ]);
     })->name('welcome');
 });
