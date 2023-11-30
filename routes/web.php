@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', function () {
+
     return view('user.welcome', [
-        'activites' => Activites::latest()->paginate(6)->withQueryString(),
-        'registerrequest' => registerrequest::all()
+        'activites' => Activites::latest()->paginate(6)->withQueryString()
 
     ]);
-});
+})->middleware('guest');
 
 
 
@@ -55,9 +55,14 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
+        $userid=Auth::user()->id;
+
+
+        $registerrequest=registerrequest::where('user_id',$userid)->get();
+
         return view('user.welcome', [
             'activites' => Activites::latest()->paginate(6)->withQueryString(),
-        'registerrequest' => registerrequest::all()
+            'registerrequest' => $registerrequest
 
  ]);
     })->name('welcome');

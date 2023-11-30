@@ -8,9 +8,9 @@
          <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-md-8 offset-md-2">
-                    <h2>Our Activity</h2>
+                    <h2>Our Activities</h2>
                     <p class="lead">
-                        Here our activity in Soran Universty you can join
+                        Welcome to Soran University Courses, where you can enrich your skills and knowledge.
                     </p>
                 </div>
             </div>
@@ -30,7 +30,7 @@
         <div class="activity">
             <div class="title">
                 <i class="uil uil-clock-three"></i>
-                <span class="text">Recent Course</span>
+                <span class="text">Recent Activity </span>
             </div>
 
             <div class="activity-data">

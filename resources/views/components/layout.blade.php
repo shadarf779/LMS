@@ -88,10 +88,10 @@
                 <div class="row mb-5 text-center">
                     <div class="col-12 text-container">
                         <h1 class="display-2 text-white mt-3">
-                            Soran Universty
+                            Soran University Activity
                         </h1>
                         <p class="lead text-white w-75 m-auto mb-4">
-                            Here Our Soran Universty activity
+                            Welcome to Soran University Activities! Explore opportunities to enhance your skills and knowledge.
                         </p>
                         @if (Route::has('login'))
                         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
