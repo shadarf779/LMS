@@ -1,158 +1,155 @@
 body {
-  min-height: 100vh;
-  background-color: rgb(5, 200, 249);
+    min-height: 100vh;
+    background-color: rgb(5, 200, 249);
 }
 .regester-part {
-  margin: 5rem auto 0 auto;
-  max-width: 700px;
-  width: 100%;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 5rem auto 0 auto;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .regester-part h1 {
-  font-size: 1.5rem;
-  color: #333;
-  font-weight: 500;
-  text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
 }
 
 aside .form {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 input[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 aside .form .input-box {
-  width: 100%;
-  margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 aside .form .input-box label {
-  color: #333;
-  float: inline-end;
+    color: #333;
+    float: inline-end;
 }
 aside .form .input-box input {
-  text-align: right;
+    text-align: right;
 }
 
 aside .form .input-box input::placeholder {
-  text-align: right;
-  font-size: 16px;
-  font-weight: 400;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 aside .form :where(.input-box input, .select-box) {
-  position: relative;
-  height: 50px;
-  width: 100%;
-  outline: none;
-  font-size: 1rem;
-  color: #707070;
-  margin-top: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0 15px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
 }
 
 aside .form .input-box input:focus {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 aside .form .radio_btn_selected {
-  margin-top: 20px;
-  text-align: right;
+    margin-top: 20px;
+    text-align: right;
 }
 
 aside .form .radio_btn_selected h3 {
-  color: #333;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 aside .form :where(.radio_btn_option, .values) {
-  display: flex;
-  align-items: center;
-  column-gap: 50px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
 }
 
 .radio_btn_option {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  column-gap: 50px;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 50px;
+    flex-wrap: wrap;
 }
 
 aside .form .values {
-  column-gap: 5px;
+    column-gap: 5px;
 }
 aside .form .values input {
-  accent-color: rgb(130, 106, 251);
+    accent-color: rgb(130, 106, 251);
 }
 aside .form :where(.values input, .values label) {
-  cursor: pointer;
+    cursor: pointer;
 }
 aside .form .values label {
-  color: #707070;
+    color: #707070;
 }
 
 .address :where(input, .select-box) {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 .select-box select {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  color: #707070;
-  font-size: 1rem;
-  text-align: end;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+    text-align: end;
 }
 
-.signup-btns{
-  display: flex;
-  justify-content: end;
-  gap: 1rem;
-  margin-top: 1rem;
-
+.signup-btns {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.signup-btns #nextButton1{
-  padding: 5px 20px 10px 20px;
+.signup-btns #nextButton1 {
+    padding: 5px 20px 10px 20px;
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 .form-2 {
-  display: none;
+    display: none;
 }
-
-
 
 /*Responsive*/
 @media screen and (max-width: 500px) {
-  .form :where(.radio_btn_option, .values) {
-    row-gap: 15px;
-  }
+    .form :where(.radio_btn_option, .values) {
+        row-gap: 15px;
+    }
 }
