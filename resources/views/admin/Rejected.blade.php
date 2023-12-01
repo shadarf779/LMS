@@ -1,7 +1,7 @@
 <x-admin-layout>
 
 
-   
+
     <!------------------------------------------------ Dashboard ------------------------------------------------>
 
     <section class="dashboard">
@@ -15,26 +15,16 @@
         </div>
 
         <div class="dash-content">
-
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
+                    <span class="text">Rejected user</span>
                 </div>
                 <div class="boxes">
-                    <div class="box box1">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="text">Total Activity</span>
-                        <span class="number">{{$ACTIVE}}</span>
-                    </div>
-                    <div class="box box2">
-                        <i class="uil uil-comments"></i>
-                        <span class="text">Total user</span>
-                        <span class="number">{{$USER}}</span>
-                    </div>
+
                     <div class="box box3">
                         <i class="uil uil-share"></i>
-                        <span class="text">Joined Users</span>
+                        <span class="text">Rejected Users</span>
                         <span class="number">{{$REQUEST}}</span>
                     </div>
                 </div>
@@ -96,14 +86,7 @@
 
                        @endforeach
                     </div>
-                    <div class="data status">
-                        <span class="data-title">Reject</span>
 
-                        @foreach($registerrequest as $registerrequests)
-                        <a href="{{url('reject',$registerrequests->id)}}"    class="custom-btn" ><i class="material-icons"  title="Delete">Reject</i></a>
-
-                       @endforeach
-                    </div>
                 </div>
             </div>
             </div>

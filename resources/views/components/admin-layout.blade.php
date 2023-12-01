@@ -561,6 +561,8 @@ nav.close ~ .dashboard .top {
 </style>
   </head>
   <body>
+
+
         <!------------------------------------------------ Navigation ------------------------------------------------>
         <nav>
             <div class="logo-name">
@@ -572,21 +574,21 @@ nav.close ~ .dashboard .top {
             <div class="menu-items">
               <ul class="nav-links">
                 <li>
-                  <a href="">
+                  <a href="/dashboard">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dashboard</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/User">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Content</span>
+                    <span class="link-name">User</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <i class="uil uil-chart"></i>
-                    <span class="link-name">Analytics</span>
+                    <span class="link-name">Activity</span>
                   </a>
                 </li>
                 <li>
@@ -629,6 +631,90 @@ nav.close ~ .dashboard .top {
               </ul>
             </div>
           </nav>
+           <!------------------------------------------------ Navigation ------------------------------------------------>
+    <nav>
+
+        <div class="logo-name">
+          <div class="logo-image">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <span class="logo_name">Soran Uni</span>
+        </div>
+        <div class="menu-items">
+          <ul class="nav-links">
+            <li>
+              <a href="/dashboard">
+                <i class="uil uil-estate"></i>
+                <span class="link-name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+                <a href="/Pending">
+                  <i class="uil uil-chart"></i>
+                  <span class="link-name">Pending User</span>
+                </a>
+              </li>
+            <li>
+              <a href="/Rejected">
+                <i class="uil uil-files-landscapes"></i>
+                <span class="link-name">Rejected User</span>
+              </a>
+            </li>
+            <li>
+                <a href="/Aproved">
+                  <i class="uil uil-chart"></i>
+                  <span class="link-name">Aproved User</span>
+                </a>
+              </li>
+              <li>
+                <a href="/Activities">
+                  <i class="uil uil-chart"></i>
+                  <span class="link-name">Activities</span>
+                </a>
+              </li>
+
+            <li>
+              <a href="/users">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="link-name">Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-comments"></i>
+                <span class="link-name">Comment</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-share"></i>
+                <span class="link-name">Share</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="logout-mode">
+            <li>
+              <a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+              </a>
+            </li>
+
+            <li class="mode">
+              <a href="#">
+                <i class="uil uil-moon"></i>
+                <span class="link-name">Dark Mode</span>
+              </a>
+
+              <div class="mode-toggle">
+                <span class="switch"> </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
 {{$slot}}
 
 
