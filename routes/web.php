@@ -8,10 +8,23 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Models\Activites;
 use App\Models\User;
+use App\Models\FeedBack;
 use Illuminate\Support\Facades\Route;
 use App\Models\registerrequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
+// routes/web.php
+
+use App\Http\Controllers\FeedbackController;
+
+Route::get('/UserFeedback/{id}', [FeedbackController::class, 'submitFeedback']);
+
+
+
+Route::get('/feedback', function () {
+    return view('user.feedback');
+});
 
 Route::get('/Create', function () {
     if(auth()->user()->Role == "admin")  {

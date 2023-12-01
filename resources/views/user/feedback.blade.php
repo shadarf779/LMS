@@ -78,21 +78,21 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#home"
+                            <a class="nav-link" aria-current="page" href="/#home"
                                 >Home</a
                             >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#activity">activity</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#discover">Discover</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#summary">Summary</a>
+                            <a class="nav-link" href="/myactivity">My Activity</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#takeaways">Takeaways</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#subscribe">Subscribe</a>
+                            <a class="nav-link" href="/feedback">FeedBack</a>
                         </li>
                     </ul>
                     <span class="nav-item">
@@ -123,43 +123,43 @@
 
 
 
-
 <div class="container mt-7 mb-5">
+    @auth
+
+
   <h2 class="mb-4">User Feedback Form</h2>
-  <form>
+  <h6 class="mb-4">{{Auth::user()->name}} What do you think about Soran Universty Acctivity</h6>
+  @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+  <form method="GET" action="/UserFeedback/{{ Auth::user()->id }}">
+    @csrf
+
     <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        <label for="rating" class="mt-3">Rating:</label>
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5"><i class="fas fa-star"></i></label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4"><i class="fas fa-star"></i></label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3"><i class="fas fa-star"></i></label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2"><i class="fas fa-star"></i></label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1"><i class="fas fa-star"></i></label>
+        </div>
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-    </div>
-    <div class="form-group">
-      <label for="feedbackType">Feedback Type:</label>
-      <select class="form-control" id="feedbackType" required>
-        <option value="" disabled selected>Select feedback type</option>
-        <option value="positive">Positive</option>
-        <option value="neutral">Neutral</option>
-        <option value="negative">Negative</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="rating" class="mt-3">Rating:</label>
-      <div class="rating">
-        <input type="radio" id="star5" name="rating" value="5"><label for="star5"><i class="fas fa-star"></i></label>
-        <input type="radio" id="star4" name="rating" value="4"><label for="star4"><i class="fas fa-star"></i></label>
-        <input type="radio" id="star3" name="rating" value="3"><label for="star3"><i class="fas fa-star"></i></label>
-        <input type="radio" id="star2" name="rating" value="2"><label for="star2"><i class="fas fa-star"></i></label>
-        <input type="radio" id="star1" name="rating" value="1"><label for="star1"><i class="fas fa-star"></i></label>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="feedback">Feedback:</label>
-      <textarea class="form-control" id="feedback" rows="5" placeholder="Enter your feedback" required></textarea>
+        <label for="comments">Feedback:</label>
+        <textarea name="comments" class="form-control" id="comments" rows="5" placeholder="Enter your feedback" required></textarea>
     </div>
     <button type="submit" class="btn btn-info text-dark mt-4 fs-6 fw-bold">Submit Feedback</button>
-  </form>
+</form>
+
 </div>
 
 
@@ -211,6 +211,12 @@
                 </div>
             </div>
         </div>
+        @else
+        <h2 align="center" class="mb-4">
+            <b>first you must <a href="/register">sign up</a> or <a href="/login">Login</a></b> To feed Back
+        </h2>
+
+        @endauth
     </div>
 </footer>
 

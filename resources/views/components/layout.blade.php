@@ -55,7 +55,7 @@
                             <a class="nav-link" href="/myactivity">My Activity</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#subscribe">Subscribe</a>
+                            <a class="nav-link" href="/feedback">FeedBack</a>
                         </li>
                     </ul>
                     <span class="nav-item">
