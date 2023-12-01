@@ -15,16 +15,21 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 // routes/web.php
-
+use App\Http\Controllers\ShowFeedBackController;
 use App\Http\Controllers\FeedbackController;
 
-Route::get('/UserFeedback/{id}', [FeedbackController::class, 'submitFeedback']);
-
+// routes/web.php
 
 
 Route::get('/feedback', function () {
     return view('user.feedback');
 });
+Route::get('/showfeedback', [ShowFeedBackController::class, 'showFeedback'])->middleware('auth');
+
+Route::get('/UserFeedback/{id}', [FeedbackController::class, 'submitFeedback']);
+
+
+
 
 Route::get('/Create', function () {
     if(auth()->user()->Role == "admin")  {

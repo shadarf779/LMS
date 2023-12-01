@@ -568,82 +568,159 @@ nav.close ~ .dashboard .top {
   <body>
     <!------------------------------------------------ Navigation ------------------------------------------------>
     <nav>
-      <div class="logo-name">
-        <div class="logo-image">
-          <img src="img/logo.png" alt="" />
+        <div class="logo-name">
+          <div class="logo-image">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <span class="logo_name">Soran Uni</span>
         </div>
-        <span class="logo_name">Soran Uni</span>
+        <div class="menu-items">
+          <ul class="nav-links">
+            <li>
+              <a href="/dashboard">
+                <i class="uil uil-estate"></i>
+                <span class="link-name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="/User">
+                <i class="uil uil-files-landscapes"></i>
+                <span class="link-name">User</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-chart"></i>
+                <span class="link-name">Activity</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="link-name">Like</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-comments"></i>
+                <span class="link-name">Comment</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-share"></i>
+                <span class="link-name">Share</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="logout-mode">
+            <li>
+              <a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+              </a>
+            </li>
+
+            <li class="mode">
+              <a href="#">
+                <i class="uil uil-moon"></i>
+                <span class="link-name">Dark Mode</span>
+              </a>
+
+              <div class="mode-toggle">
+                <span class="switch"> </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+       <!------------------------------------------------ Navigation ------------------------------------------------>
+<nav>
+
+    <div class="logo-name">
+      <div class="logo-image">
+        <img src="img/logo.png" alt="" />
       </div>
-      <div class="menu-items">
-        <ul class="nav-links mynav">
-          <li>
-            <a href="index.html">
-              <i class="uil uil-estate"></i>
-              <span class="link-name">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="uil uil-files-landscapes"></i>
-              <span class="link-name">Content</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
+      <span class="logo_name">Soran Uni</span>
+    </div>
+    <div class="menu-items">
+      <ul class="nav-links">
+        <li>
+          <a href="/dashboard">
+            <i class="uil uil-estate"></i>
+            <span class="link-name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+            <a href="/Pending">
               <i class="uil uil-chart"></i>
-              <span class="link-name">Analytics</span>
+              <span class="link-name">Pending User</span>
             </a>
           </li>
-
-          <li>
-            <a href="showfeedback.html">
-              <i class="bi bi-chat-dots"></i>
-              <span class="link-name">Feedbacks</span>
+        <li>
+          <a href="/Rejected">
+            <i class="uil uil-files-landscapes"></i>
+            <span class="link-name">Rejected User</span>
+          </a>
+        </li>
+        <li>
+            <a href="/Aproved">
+              <i class="uil uil-chart"></i>
+              <span class="link-name">Aproved User</span>
             </a>
           </li>
-
           <li>
-            <a href="#">
+            <a href="/Activities">
+              <i class="uil uil-chart"></i>
+              <span class="link-name">Activities</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Create">
               <i class="uil uil-thumbs-up"></i>
-              <span class="link-name">Like</span>
+              <span class="link-name">Add Activity</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <i class="uil uil-comments"></i>
-              <span class="link-name">Comment</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="uil uil-share"></i>
-              <span class="link-name">Share</span>
-            </a>
-          </li>
+        <li>
+          <a href="/users">
+            <i class="uil uil-thumbs-up"></i>
+            <span class="link-name">Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="/showfeedback">
+            <i class="uil uil-comments"></i>
+            <span class="link-name">FeedBack</span>
+          </a>
+        </li>
 
-        </ul>
-        <ul class="logout-mode mynav">
-          <li>
-            <a href="#">
-              <i class="uil uil-signout"></i>
-              <span class="link-name">Logout</span>
-            </a>
-          </li>
+      </ul>
+      <ul class="logout-mode">
+        <li>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </button>
+            </form>
 
-          <li class="mode">
-            <a href="#">
-              <i class="uil uil-moon"></i>
-              <span class="link-name">Dark Mode</span>
-            </a>
 
-            <div class="mode-toggle">
-              <span class="switch"> </span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        </li>
 
+        <li class="mode">
+          <a href="#">
+            <i class="uil uil-moon"></i>
+            <span class="link-name">Dark Mode</span>
+          </a>
+
+          <div class="mode-toggle">
+            <span class="switch"> </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
     <!------------------------------------------------ Dashboard ------------------------------------------------>
 <section class="dashboard">
     <div class="top">
@@ -686,30 +763,42 @@ nav.close ~ .dashboard .top {
       </header>
 
       <!-- Positive Feedback -->
+      <!-- resources/views/admin/feedback/show.blade.php -->
+
+
+
+
+
       <div class="container" id="pending-user">
         <h1 class="my-4">Positive Feedback</h1>
+        @foreach($feedbacks as $feedback)
+
         <div class="row user-info">
 
           <div class="col-md-4 mb-4">
               <div class="card border-info border-3 p-2">
                   <div class="card-body">
                       <h5 class="card-subtitle mb-2 text-muted">
-                          Name: <span>Aram Ismael</span>
+                          Name: <span> {{ $feedback->User()->name }}</span>
                       </h5>
                       <div class="rating">
+
+                                @foreach($feedbacks as $feedback)
                           <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
+
+                                @endforeach
+
                       </div>
                       <p class="card-text">
-                          Great experience using the website. Everything
-                          is user-friendly!
+
+
+                        {{ $feedback->comments }}
+
                       </p>
                   </div>
               </div>
           </div>
+          @endforeach
 
         </div>
       </div>

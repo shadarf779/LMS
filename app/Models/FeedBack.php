@@ -11,4 +11,9 @@ class FeedBack extends Model
 protected $fillable = ['user_id', 'rating', 'comments'];
 
     use HasFactory;
+
+    public function User()
+    {
+        return $this->hasMany(User::class);
+    }
 }
