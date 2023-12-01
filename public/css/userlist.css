@@ -1,0 +1,53 @@
+.user-card {
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.user-detail {
+  padding: 20px;
+}
+
+.user-detail div {
+  margin-bottom: 10px;
+}
+
+.user-detail strong {
+  color: #007bff;
+}
+
+.user-card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .user-data {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .user-data {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
