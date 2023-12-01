@@ -13,13 +13,11 @@ use App\Models\registerrequest;
 use Illuminate\Support\Facades\Auth;
 
 
-if
-       ( auth()->user()->Role == "admin"){
 
-Route::get('/Aprove', function () {
-
-    
-
+Route::get('/Aprove/{id}', function ($id) {
+    if(auth()->user()->Role == "admin")  {
+    $request = RegisterRequest::findOrFail($id);
+    $request->update(['status' => 'Aproved']);
     return view('admin.welcome', [
         'users' => User::all(),
         'activites' => Activites::latest()->paginate(6)->withQueryString(),
@@ -30,9 +28,27 @@ Route::get('/Aprove', function () {
 
 
 
-]);
+])->with('success', 'Registration request rejected successfully.');
+        }
 });
-       }
+
+Route::get('/reject/{id}', function ($id) {
+    if(auth()->user()->Role == "admin")  {
+    $request = RegisterRequest::findOrFail($id);
+    $request->update(['status' => 'rejected']);
+    return view('admin.welcome', [
+        'users' => User::all(),
+        'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => registerrequest::latest()->paginate(1234)->withQueryString(),
+        'USER'=>User::count(),
+        'ACTIVE'=>Activites::count(),
+        'REQUEST'=>registerrequest::count()
+
+
+
+])->with('success', 'Registration request rejected successfully.');
+        }
+});
 
 Route::get('/myactivity', function () {
 
