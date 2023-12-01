@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(registerrequest::class, 'user_id');
     }
+
+    public function feedback()
+    {
+        return $this->belongsTo(feedBack::class, 'user_id');
+    }
 }
