@@ -259,7 +259,7 @@
                                     and be a part of this enriching experience!
                                 </p>
                                 <a
-                                    href="#register"
+                                    href="/register"
                                     class="btn btn-primary btn-lg"
                                 >
                                     Register Now
@@ -272,38 +272,6 @@
         </section>
 
 
-        <!---------------------------- Subscribe Form ---------------------------->
-        <section id="subscribe" class="subscribe my-5">
-            <div class="container">
-                <div class="row">
-                    <!-- am coloma la medium basarawa 6 colom wardagre u dacheta nawandesh bahoy offset-md-3 chunka dalle la mediumawa 3 colom lay chap u 3 colome rast batall bka -->
-                    <div class="col-md-6 offset-md-3 text-center">
-                        <h2>
-                            Subscribe to our email list and get updates from the
-                            experts
-                        </h2>
-                        <form>
-                            <div class="my-4">
-                                <input
-                                    type="email"
-                                    class="form-control form-control-lg"
-                                    placeholder="Enter email"
-                                />
-                                <div class="form-text">
-                                    We will never share your email address
-                                </div>
-                            </div>
-                            <!-- d-grid bo awaya buttonaka 12 colom dager kat yan bllen waku block elemente lebet -->
-                            <div class="d-grid">
-                                <button class="btn btn-primary">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 
 </x-layout>
