@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Feedback Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+    <link rel="icon" href="../images/favicon.png" />
+    <!------------------------------------------------ Iconscout CSS ------------------------------------------------>
+    <link
+        rel="stylesheet"
+        href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+   <link rel="stylesheet" href="../css/home.css">
+    <!-- Font Awesome for stars -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/userlist.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+/>
+<style>
+    /* Additional styling for stars */
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: ltr;
+        text-align: center;
+    }
+    .rating label {
+        color: #f39c12;
+        font-size: 1.5rem;
+        padding: 0.1em;
+        display: inline-block;
+    }
+</style>
+  </head>
+  <body>
+
+<!---------------------------- Navigation ---------------------------->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+  <div class="container">
+      <a href="index.html" class="navbar-brand">
+          <img src="images/soranbanner.png" alt="" width="50bit" />
+      </a>
+      <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+      >
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#home"
+                      >Home</a
+                  >
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#discover">Discover</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#summary">Summary</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#takeaways">Takeaways</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#subscribe">Subscribe</a>
+              </li>
+          </ul>
+          <span class="nav-item">
+              <span class="fa-stack">
+                  <a href="#">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i
+                          class="fab fa-facebook-f fa-stack-1x text-white"
+                      ></i>
+                  </a>
+              </span>
+          </span>
+          <span class="nav-item">
+              <span class="fa-stack">
+                  <a href="#">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i
+                          class="fab fa-twitter fa-stack-1x text-white"
+                      ></i>
+                  </a>
+              </span>
+          </span>
+      </div>
+  </div>
+</nav>
+
+    <header class="mb-5 mt-7">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Feedback Search"
+            />
+          </div>
+
+          <div
+            class="col-md-8 user-menu d-flex justify-content-end align-items-center"
+          >
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="#active-user" class="nav-link">Neutral Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#pending-user"
+                  class="nav-link"
+                  >Positive Feedback</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#banned-user" class="nav-link">Negative Feedback</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Positive Feedback -->
+    <div class="container" id="pending-user">
+      <h1 class="my-4">Positive Feedback</h1>
+      <div class="row user-info">
+
+        <div class="col-md-4 mb-4">
+            <div class="card border-info border-3 p-2">
+                <div class="card-body">
+                    <h5 class="card-subtitle mb-2 text-muted">
+                        Name: <span>Aram Ismael</span>
+                    </h5>
+                    <div class="rating">
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                    </div>
+                    <p class="card-text">
+                        Great experience using the website. Everything
+                        is user-friendly!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-------------------------------------------- Neutral Feedback -------------------------------------------->
+    <div class="container" id="active-user">
+      <h1 class="my-4">Neutral Feedback</h1>
+      <div class="row user-info">
+
+       
+        <div class="col-md-4 mb-4">
+            <div class="card border-info border-3 p-2">
+                <div class="card-body">
+                    <h5 class="card-subtitle mb-2 text-muted">
+                        Name: <span>Shad Arf</span>
+                    </h5>
+                    <div class="rating">
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="fas fa-star"></i></label>
+                        <label><i class="far fa-star"></i></label>
+                    </div>
+                    <p class="card-text">
+                        The website is okay, but there are some areas
+                        that can be improved.
+                    </p>
+                </div>
+            </div>
+        </div>
+       
+      </div>
+    </div>
+    
+    <!-------------------------------------------- Negative Feedback -------------------------------------------->
+
+      <div class="container" id="banned-user">
+        <h1 class="my-4">Negative Feedback</h1>
+        <div class="row user-info">
+            <div class="col-md-4 mb-4">
+                <div class="card border-info border-3 p-2">
+                    <div class="card-body">
+                        <h5 class="card-subtitle mb-2 text-muted">
+                            Name: <span>Muzafar Arez</span>
+                        </h5>
+                        <div class="rating">
+                            <label><i class="fas fa-star"></i></label>
+                            <label><i class="far fa-star"></i></label>
+                            <label><i class="far fa-star"></i></label>
+                            <label><i class="far fa-star"></i></label>
+                            <label><i class="far fa-star"></i></label>
+                        </div>
+                        <p class="card-text">
+                            The website is confusing and difficult to
+                            navigate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <nav aria-label="page navigation">
+        <ul class="pagination justify-content-end">
+          <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+          <li class="page-item"><a href="#" class="page-link">1</a></li>
+          <li class="page-item active"><a href="#" class="page-link">2</a></li>
+          <li class="page-item"><a href="#" class="page-link">3</a></li>
+          <li class="page-item">
+            <a href="#" class="page-link" aria-label="Next">&raquo;</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+
+
+
+
+
+ <!---------------------------- Footer ---------------------------->
+ <footer class="footer mt-4 text-bg-dark py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <h5>Lorem Ipsum</h5>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing
+                  elit. Eos possimus aliquid omnis commodi.
+                  Dignissimos, quam obcaecati? Fugit non ex
+                  repellendus?
+              </p>
+          </div>
+          <div class="col-md-4">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#discover">Discover</a></li>
+                  <li><a href="#summary">Summary</a></li>
+                  <li><a href="#takeaways">Takeaways</a></li>
+                  <li><a href="#subscribe">Subscribe</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h5>Connect</h5>
+              <div class="d-flex gap-3">
+                  <a href="#"
+                      ><i class="fab fa-facebook fa-3x text-white"></i
+                  ></a>
+                  <a href="#"
+                      ><i class="fab fa-twitter fa-3x text-white"></i
+                  ></a>
+                  <a href="#"
+                      ><i class="fab fa-linkedin fa-3x text-white"></i
+                  ></a>
+                  <a href="#"
+                      ><i
+                          class="fab fa-instagram fa-3x text-white"
+                      ></i
+                  ></a>
+                  <a href="#"
+                      ><i class="fab fa-youtube fa-3x text-white"></i
+                  ></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/darkmodetoggle.js"></script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+    </script>
+
+    <script>
+      // Function to toggle the visibility and active state of the user sections
+      function toggleUserSections(sectionId) {
+        const sections = ["pending-user", "active-user", "banned-user"]; // Include "banned-user"
+
+        // Hide all sections
+        sections.forEach((section) => {
+          const sectionElement = document.getElementById(section);
+          sectionElement.style.display =
+            section === sectionId ? "block" : "none";
+        });
+
+        // Toggle the "text-bg-primary rounded-3" class on the links
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          link.classList.remove("text-bg-info", "rounded-3");
+        });
+        document
+          .querySelector(`a[href="#${sectionId}"]`)
+          .classList.add("text-bg-info", "rounded-3");
+      }
+
+      // Add event listeners to the navigation links
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const sectionId = link.getAttribute("href").substring(1);
+          toggleUserSections(sectionId);
+        });
+      });
+
+      // Initially, show the pending user section and set the class
+      toggleUserSections("pending-user");
+
+      // Add an event listener for the "Banned User" link
+      const bannedUserLink = document.querySelector('a[href="#banned-user"]');
+      bannedUserLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        toggleUserSections("banned-user");
+      });
+    </script>
+  </body>
+</html>
