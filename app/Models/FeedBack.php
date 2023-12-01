@@ -12,8 +12,8 @@ protected $fillable = ['user_id', 'rating', 'comments'];
 
     use HasFactory;
 
-    public function User()
+    public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class, 'user_id');
     }
 }

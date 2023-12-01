@@ -772,6 +772,7 @@ nav.close ~ .dashboard .top {
       <div class="container" id="pending-user">
         <h1 class="my-4">Positive Feedback</h1>
         @foreach($feedbacks as $feedback)
+        @if($feedback->rating>4)
 
         <div class="row user-info">
 
@@ -779,14 +780,19 @@ nav.close ~ .dashboard .top {
               <div class="card border-info border-3 p-2">
                   <div class="card-body">
                       <h5 class="card-subtitle mb-2 text-muted">
-                          Name: <span> {{ $feedback->User()->name }}</span>
+
+                        @php
+                        $user = App\Models\User::find($feedback->user_id);
+                    @endphp
+                          Name: <span> {{ $user->name }}</span>
                       </h5>
                       <div class="rating">
+                                @php $Rate = $feedback->rating
+                                @endphp
+                                @while($Rate--)
 
-                                @foreach($feedbacks as $feedback)
-                          <label><i class="fas fa-star"></i></label>
-
-                                @endforeach
+                                 <label><i class="fas fa-star"></i></label>
+                                @endwhile
 
                       </div>
                       <p class="card-text">
@@ -798,6 +804,7 @@ nav.close ~ .dashboard .top {
                   </div>
               </div>
           </div>
+          @endif
           @endforeach
 
         </div>
@@ -806,59 +813,82 @@ nav.close ~ .dashboard .top {
       <!-------------------------------------------- Neutral Feedback -------------------------------------------->
       <div class="container" id="active-user">
         <h1 class="my-4">Neutral Feedback</h1>
-        <div class="row user-info">
+        @foreach($feedbacks as $feedback)
+        @if($feedback->rating<4&&$feedback->rating>1)
 
+        <div class="row user-info">
 
           <div class="col-md-4 mb-4">
               <div class="card border-info border-3 p-2">
                   <div class="card-body">
                       <h5 class="card-subtitle mb-2 text-muted">
-                          Name: <span>Shad Arf</span>
+
+                        @php
+                        $user = App\Models\User::find($feedback->user_id);
+                    @endphp
+                          Name: <span> {{ $user->name }}</span>
                       </h5>
                       <div class="rating">
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="far fa-star"></i></label>
+                                @php $Rate = $feedback->rating
+                                @endphp
+                                @while($Rate--)
+
+                                 <label><i class="fas fa-star"></i></label>
+                                @endwhile
+
                       </div>
                       <p class="card-text">
-                          The website is okay, but there are some areas
-                          that can be improved.
+
+
+                        {{ $feedback->comments }}
+
                       </p>
                   </div>
               </div>
           </div>
-
-        </div>
+          @endif
+          @endforeach
       </div>
 
       <!-------------------------------------------- Negative Feedback -------------------------------------------->
 
         <div class="container" id="banned-user">
           <h1 class="my-4">Negative Feedback</h1>
+          @foreach($feedbacks as $feedback)
+          @if($feedback->rating<=1)
+
           <div class="row user-info">
-              <div class="col-md-4 mb-4">
-                  <div class="card border-info border-3 p-2">
-                      <div class="card-body">
-                          <h5 class="card-subtitle mb-2 text-muted">
-                              Name: <span>Muzafar Arez</span>
-                          </h5>
-                          <div class="rating">
-                              <label><i class="fas fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                          </div>
-                          <p class="card-text">
-                              The website is confusing and difficult to
-                              navigate.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card border-info border-3 p-2">
+                    <div class="card-body">
+                        <h5 class="card-subtitle mb-2 text-muted">
+
+                          @php
+                          $user = App\Models\User::find($feedback->user_id);
+                      @endphp
+                            Name: <span> {{ $user->name }}</span>
+                        </h5>
+                        <div class="rating">
+                                  @php $Rate = $feedback->rating
+                                  @endphp
+                                  @while($Rate--)
+
+                                   <label><i class="fas fa-star"></i></label>
+                                  @endwhile
+
+                        </div>
+                        <p class="card-text">
+
+
+                          {{ $feedback->comments }}
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @endif
+            @endforeach
         </div>
 
       </div>
