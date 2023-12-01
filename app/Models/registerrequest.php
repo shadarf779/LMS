@@ -10,14 +10,17 @@ class registerrequest extends Model
     protected $guarded = [];
     use HasFactory;
 
-    public function user()
+
+
+    public function User()
     {
-        return $this->hasMany(User::class, 'id');
+        return $this->hasMany(User::class);
+    }
+    public function Activites()
+    {
+        return $this->hasMany(Activites::class);
     }
 
-    public function activity()
-    {
-        return $this->hasMany(Activites::class, 'id');
-    }
+
 
 }

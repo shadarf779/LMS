@@ -9,9 +9,10 @@ class Activites extends Model
 {
     use HasFactory;
 
-    public function registerRequests()
+   
+    public function registerrequest()
     {
-        return $this->hasMany(registerrequest::class, 'activites_id');
+        return $this->hasMany(registerrequest::class);
     }
 
     // Define the inverse relationship with the RegisterRequest model

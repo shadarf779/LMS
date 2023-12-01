@@ -46,16 +46,16 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#activity">activity</a>
+                            <a class="nav-link" href="/#activity">activity</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#discover">Discover</a>
+                            <a class="nav-link" href="/#discover">Discover</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/myactivity">My Activity</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#subscribe">Subscribe</a>
+                            <a class="nav-link" href="/#subscribe">Subscribe</a>
                         </li>
                     </ul>
                     <span class="nav-item">
@@ -85,43 +85,8 @@
         <!---------------------------- Header ---------------------------->
         <!-- vh-100 wata barzyakay 100% heighte brasaraka dabet -->
         <header class="header py-7 vh-100">
-            <div class="container">
-                <div class="row mb-5 text-center">
-                    <div class="col-12 text-container">
-                        <h1 class="display-2 text-white mt-3">
-                            Soran University Activity
-                        </h1>
-                        <p class="lead text-white w-75 m-auto mb-4">
-                            Welcome to Soran University Activities! Explore opportunities to enhance your skills and knowledge.
-                        </p>
-                        @if (Route::has('login'))
-                        <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                            @auth
-
-                            @if (Route::has('register'))
-                            <a
-                            href="{{ route('profile.show') }}"
-                           class="btn btn-primary text-uppercase"
-                            > {{ Auth::user()->name }}</a>
-                            @endif
-
-                            @else
-                                <a href="{{ route('login') }}" class="btn btn-outline-light text-uppercase">Log in</a>
-
-                                @if (Route::has('register'))
-                                     <a
-                                     href="{{ route('register') }}"
-                                    class="btn btn-primary text-uppercase"
-                                >Register</a>
-                                @endif
-                            @endauth
-                        </div>
-                    @endif
 
 
-
-                    </div>
-                </div>
 
                 <div class="row">
                     <div class="col-12">

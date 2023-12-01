@@ -14,6 +14,25 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+Route::get('/myactivity', function () {
+
+    $userid=Auth::user()->id;
+    $appoint = registerrequest::where('user_id',$userid)->get();
+
+    return view('user.myactivity', [
+        'relation' => $appoint,
+        'activites' => Activites::all()
+    ]);
+});
+
+Route::get('/myactivity', function () {
+
+
+    return view('user.myactivity');
+})->middleware('guest');
+
+
+
 Route::get('/', function () {
 
     return view('user.welcome', [
