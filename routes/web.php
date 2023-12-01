@@ -77,12 +77,26 @@ Route::middleware([
         $userid=Auth::user()->id;
 
 
-        $registerrequest=registerrequest::where('user_id',$userid)->get();
 
+        $registerrequest=registerrequest::where('user_id',$userid)->get();
+        if(auth()->user()->Role == "Student")
+        {
         return view('user.welcome', [
             'activites' => Activites::latest()->paginate(6)->withQueryString(),
             'registerrequest' => $registerrequest
 
  ]);
+       }elseif
+       ( auth()->user()->Role == "admin")
+       {
+        return view('admin.welcome', [
+            'activites' => Activites::latest()->paginate(6)->withQueryString(),
+            'registerrequest' => $registerrequest
+
+ ]);
+       }
     })->name('welcome');
 });
+
+
+
