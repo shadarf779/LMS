@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soran University Admin Dashboard Panel</title>
+    <title>Add New Post</title>
 
     
 
@@ -134,7 +134,7 @@ body.dark {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
+  background: #0e4bf1;
   border-radius: 12px;
   transition: all 0.3s ease;
 }
@@ -564,6 +564,204 @@ nav.close ~ .dashboard .top {
     padding-left: 0;
 }
 </style>
+
+
+
+<!----------------------------------------- Main Form style----------------------------------------->
+
+
+<style>
+
+.regester-part {
+  margin: 5rem auto 0 auto;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .regester-part{
+    background-color: #3a3b3c;
+}
+
+
+.regester-part h1 {
+  font-size: 1.5rem;
+  color: #333 !important;
+  font-weight: 500;
+  text-align: center;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+aside .form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+aside .form .input-box label {
+  color: #333 !important;
+  float: inline-start;
+}
+aside .form .input-box input {
+  text-align: left;
+}
+
+aside .form .input-box input::placeholder {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+aside .form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+aside .form .input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+aside .form .radio_btn_selected {
+  margin-top: 20px;
+  text-align: left;
+}
+
+aside .form .radio_btn_selected h3 {
+  color: #333 !important;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+aside .form :where(.radio_btn_option, .values) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.radio_btn_option {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+aside .form .values {
+  column-gap: 5px;
+}
+aside .form .values input {
+  accent-color: rgb(130, 106, 251);
+}
+aside .form :where(.values input, .values label) {
+  cursor: pointer;
+}
+aside .form .values label {
+  color: #707070;
+}
+
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+  text-align: start;
+}
+
+.signup-btns{
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  margin-top: 1rem;
+
+}
+
+.signup-btns #nextButton1{
+  padding: 5px 20px 10px 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.form-2 {
+  display: none;
+}
+
+body.dark .regester-part h1, aside .form label{
+    color: white !important;
+}
+
+body.dark .regester-part aside .form label{
+    color: white !important;
+}
+
+.custom-textarea {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: 20px;
+
+      outline: none;
+      
+
+  background: none;
+    }
+
+.custom-textarea:focus{
+  outline: none;
+  box-shadow: none;
+  border: solid 1px black;
+
+  background: none;
+}
+
+body.dark .custom-textarea{
+  background-color: white;
+}
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form :where(.radio_btn_option, .values) {
+    row-gap: 15px;
+  }
+}
+</style>
   </head>
   <body>
     <!------------------------------------------------ Navigation ------------------------------------------------>
@@ -594,20 +792,24 @@ nav.close ~ .dashboard .top {
               <span class="link-name">Analytics</span>
             </a>
           </li>
-
+          
+          
           <li>
             <a href="addpost.html">
               <i class="uil uil-share"></i>
               <span class="link-name">Create Post</span>
             </a>
           </li>
-          
+
+
           <li>
             <a href="showfeedback.html">
               <i class="bi bi-chat-dots"></i>
               <span class="link-name">Feedbacks</span>
             </a>
           </li>
+
+          
 
           <li>
             <a href="#">
@@ -652,129 +854,93 @@ nav.close ~ .dashboard .top {
         <i class="uil uil-bars sidebar-toggle"></i>
         <img src="img/profile.jpg" alt="">
     </div>
-    <header class="mb-5 mt-6">
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control form-control-lg"
-                placeholder="Feedback Search"
-              />
-            </div>
   
-            <div
-              class="col-md-8 user-menu d-flex justify-content-end align-items-center"
-            >
-              <ul class="nav">
-                <li class="nav-item">
-                  <a href="#active-user" class="nav-link">Neutral Feedback</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#pending-user"
-                    class="nav-link"
-                    >Positive Feedback</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="#banned-user" class="nav-link">Negative Feedback</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        </div>
-      </header>
-  
-      <!-- Positive Feedback -->
-      <div class="container" id="pending-user">
-        <h1 class="my-4">Positive Feedback</h1>
-        <div class="row user-info">
-
-          <div class="col-md-4 mb-4">
-              <div class="card border-info border-3 p-2">
-                  <div class="card-body">
-                      <h5 class="card-subtitle mb-2 text-muted">
-                          Name: <span>Aram Ismael</span>
-                      </h5>
-                      <div class="rating">
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                      </div>
-                      <p class="card-text">
-                          Great experience using the website. Everything
-                          is user-friendly!
-                      </p>
-                  </div>
-              </div>
-          </div>
-          
-        </div>
-      </div>
-  
-      <!-------------------------------------------- Neutral Feedback -------------------------------------------->
-      <div class="container" id="active-user">
-        <h1 class="my-4">Neutral Feedback</h1>
-        <div class="row user-info">
-  
-         
-          <div class="col-md-4 mb-4">
-              <div class="card border-info border-3 p-2">
-                  <div class="card-body">
-                      <h5 class="card-subtitle mb-2 text-muted">
-                          Name: <span>Shad Arf</span>
-                      </h5>
-                      <div class="rating">
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="fas fa-star"></i></label>
-                          <label><i class="far fa-star"></i></label>
-                      </div>
-                      <p class="card-text">
-                          The website is okay, but there are some areas
-                          that can be improved.
-                      </p>
-                  </div>
-              </div>
-          </div>
-         
-        </div>
-      </div>
       
-      <!-------------------------------------------- Negative Feedback -------------------------------------------->
-  
-        <div class="container" id="banned-user">
-          <h1 class="my-4">Negative Feedback</h1>
-          <div class="row user-info">
-              <div class="col-md-4 mb-4">
-                  <div class="card border-info border-3 p-2">
-                      <div class="card-body">
-                          <h5 class="card-subtitle mb-2 text-muted">
-                              Name: <span>Muzafar Arez</span>
-                          </h5>
-                          <div class="rating">
-                              <label><i class="fas fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                              <label><i class="far fa-star"></i></label>
-                          </div>
-                          <p class="card-text">
-                              The website is confusing and difficult to
-                              navigate.
-                          </p>
-                      </div>
-                  </div>
+      <!-------------------------------------------------------- Main -------------------------------------------------------->
+
+    <main style="margin-top: 8rem;">
+        <section class="regester-part">
+         <h1>Add New Post</h1>
+          <aside class="form-1">
+            <form action="#" class="form">
+              <div class="input-box">
+                <label>Post Name</label>
+                <input type="text" placeholder="Enter Post Name" required />
               </div>
-          </div>
-        </div>
+              <div class="input-box">
+                <label class="mb-2" for="exampleTextarea">Post Description</label>
+                <textarea class="form-control custom-textarea" id="exampleTextarea" rows="5" placeholder="Type your Post description here..."></textarea>
+              </div>
+              <div class="input-box">
+                <label>Activity Date</label>
+                <input
+                  type="date"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <label>Activity Location</label>
+                <input type="text" placeholder="Enter Activity Location" required />
+              </div>
+  
+              
+              <div class="signup-btns">
+                <button id="nextButton1" type="button" onclick="nextPart(1)">
+                 Next
+                </button>
+              </div>
+            
+          </aside>
+  
+          <aside class="form-2">
+            
+              <div class="form">
+                <div class="input-box">
+                  <label>DeadLine</label>
+                  <input
+                    type="date"
+                    required
+                  />
+                </div>
+                
+                
+                <div class="input-box">
+                  <label>Max Participant</label>
+                  <input type="number" placeholder="number of MAX Participant" required />
+                </div>
+  
+                
+                <div class="input-box">
+                  <label>Registration Code</label>
+                  <input type="number" placeholder="Enter registration code" required />
+                </div>
+  
+  
+                
+  
+  
+                <div class="signup-btns">
+                  <button id="prevButton2" type="button" onclick="prevPart(2)">
+                    Back
+                  </button>
+                  <button id="submitButton" type="submit">
+                    Send
+                  </button>
+                  
+                  
+                </div>
+              </div>
+  
+              
+              
+            </form>
+          </aside>
+        </section>
+      </main>
+  
         
-      </div>
+      
 </section>
    
     
@@ -818,7 +984,21 @@ nav.close ~ .dashboard .top {
 
 
 
+<script>
+    function nextPart(currentPart) {
+      if (currentPart === 1) {
+        document.querySelector(".form-1").style.display = "none";
+        document.querySelector(".form-2").style.display = "block";
+      }
+    }
 
+    function prevPart(currentPart) {
+      if (currentPart === 2) {
+        document.querySelector(".form-1").style.display = "block";
+        document.querySelector(".form-2").style.display = "none";
+      }
+    }
+  </script>
 
 
 
@@ -834,6 +1014,11 @@ nav.close ~ .dashboard .top {
 
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/darkmodetoggle.js"></script>
+
+<script src="../js/script.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+
+    <script src="js/shared.js"></script>
 <script>
   const popoverTriggerList = document.querySelectorAll(
     '[data-bs-toggle="popover"]'
@@ -842,49 +1027,6 @@ nav.close ~ .dashboard .top {
   const popoverList = [...popoverTriggerList].map(
     (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
   );
-</script>
-
-<script>
-  // Function to toggle the visibility and active state of the user sections
-  function toggleUserSections(sectionId) {
-    const sections = ["pending-user", "active-user", "banned-user"]; // Include "banned-user"
-
-    // Hide all sections
-    sections.forEach((section) => {
-      const sectionElement = document.getElementById(section);
-      sectionElement.style.display =
-        section === sectionId ? "block" : "none";
-    });
-
-    // Toggle the "text-bg-primary rounded-3" class on the links
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach((link) => {
-      link.classList.remove("text-bg-info", "rounded-3");
-    });
-    document
-      .querySelector(`a[href="#${sectionId}"]`)
-      .classList.add("text-bg-info", "rounded-3");
-  }
-
-  // Add event listeners to the navigation links
-  const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const sectionId = link.getAttribute("href").substring(1);
-      toggleUserSections(sectionId);
-    });
-  });
-
-  // Initially, show the pending user section and set the class
-  toggleUserSections("pending-user");
-
-  // Add an event listener for the "Banned User" link
-  const bannedUserLink = document.querySelector('a[href="#banned-user"]');
-  bannedUserLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    toggleUserSections("banned-user");
-  });
 </script>
 
   </body>
