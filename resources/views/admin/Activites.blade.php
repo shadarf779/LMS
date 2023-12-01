@@ -41,7 +41,8 @@
 
                     <span class="text">All activites </span>
                 </div>
-                
+                <x-ActivityCard :activites="$activites" />
+                {{ $activites->links('pagination::bootstrap-5') }}
             </div>
 
         </div>
