@@ -14,11 +14,63 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+
+Route::get('/Activities', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.Activites', [
+        'activites' => Activites::latest()->paginate(30)->withQueryString(),
+        'ACTIVE' => Activites::count()
+
+]);
+        }
+});
+
+Route::get('/Rejected', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.Rejected', [
+        'users' => User::all(),
+        'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => RegisterRequest::where('status', 'rejected')->get(),
+        'REQUEST' => RegisterRequest::where('status', 'rejected')->count()
+
+
+]);
+        }
+});
+
+Route::get('/Aproved', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.Aprove', [
+        'users' => User::all(),
+        'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => RegisterRequest::where('status', 'Aproved')->get(),
+        'REQUEST' => RegisterRequest::where('status', 'Aproved')->count()
+
+
+]);
+        }
+});
+
+Route::get('/Pending', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.Pending', [
+        'users' => User::all(),
+        'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => RegisterRequest::where('status', 'Pending')->get(),
+        'REQUEST' => RegisterRequest::where('status', 'Pending')->count()
+
+
+
+]);
+        }
+});
+
 Route::get('/Aprove/{id}', function ($id) {
     if(auth()->user()->Role == "admin")  {
     $request = RegisterRequest::findOrFail($id);
     $request->update(['status' => 'Aproved']);
     return view('admin.welcome', [
+        'success' => 'Registration request approved successfully.',
         'users' => User::all(),
         'activites' => Activites::latest()->paginate(6)->withQueryString(),
         'registerrequest' => registerrequest::latest()->paginate(1234)->withQueryString(),
@@ -28,7 +80,7 @@ Route::get('/Aprove/{id}', function ($id) {
 
 
 
-])->with('success', 'Registration request rejected successfully.');
+]);
         }
 });
 
