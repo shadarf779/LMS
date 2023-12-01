@@ -7,12 +7,32 @@ use App\Http\Controllers\RegisterController;
 
 use App\Http\Controllers\SessionController;
 use App\Models\Activites;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Models\registerrequest;
 use Illuminate\Support\Facades\Auth;
 
 
+if
+       ( auth()->user()->Role == "admin"){
 
+Route::get('/Aprove', function () {
+
+    
+
+    return view('admin.welcome', [
+        'users' => User::all(),
+        'activites' => Activites::latest()->paginate(6)->withQueryString(),
+        'registerrequest' => registerrequest::latest()->paginate(1234)->withQueryString(),
+        'USER'=>User::count(),
+        'ACTIVE'=>Activites::count(),
+        'REQUEST'=>registerrequest::count()
+
+
+
+]);
+});
+       }
 
 Route::get('/myactivity', function () {
 
@@ -89,9 +109,17 @@ Route::middleware([
        }elseif
        ( auth()->user()->Role == "admin")
        {
+
+
         return view('admin.welcome', [
+            'users' => User::all(),
             'activites' => Activites::latest()->paginate(6)->withQueryString(),
-            'registerrequest' => $registerrequest
+            'registerrequest' => registerrequest::latest()->paginate(1234)->withQueryString(),
+            'USER'=>User::count(),
+            'ACTIVE'=>Activites::count(),
+            'REQUEST'=>registerrequest::count()
+
+
 
  ]);
        }
