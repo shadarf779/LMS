@@ -682,22 +682,22 @@ nav.close ~ .dashboard .top {
             <li>
               <a href="#">
                 <i class="uil uil-comments"></i>
-                <span class="link-name">Comment</span>
+                <span class="link-name">FeedBack</span>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <i class="uil uil-share"></i>
-                <span class="link-name">Share</span>
-              </a>
-            </li>
+
           </ul>
           <ul class="logout-mode">
             <li>
-              <a href="#">
-                <i class="uil uil-signout"></i>
-                <span class="link-name">Logout</span>
-              </a>
+                <form action="/logout" method="POST">
+                <button type="submit">
+                    <a href="/logout">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                      </a>
+                </button>
+                </form>
+
             </li>
 
             <li class="mode">

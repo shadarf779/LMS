@@ -13,6 +13,15 @@ use App\Models\registerrequest;
 use Illuminate\Support\Facades\Auth;
 
 
+Route::get('/users', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.users', [
+            'users' => User::all(),
+            'USER'=>User::count(),
+
+]);
+        }
+});
 
 
 Route::get('/Activities', function () {
