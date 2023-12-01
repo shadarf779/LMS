@@ -13,6 +13,11 @@ use App\Models\registerrequest;
 use Illuminate\Support\Facades\Auth;
 
 
+Route::get('/Create', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.Create');
+        }
+});
 Route::get('/users', function () {
     if(auth()->user()->Role == "admin")  {
     return view('admin.users', [

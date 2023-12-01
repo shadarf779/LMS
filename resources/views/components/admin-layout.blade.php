@@ -672,7 +672,12 @@ nav.close ~ .dashboard .top {
                   <span class="link-name">Activities</span>
                 </a>
               </li>
-
+              <li>
+                <a href="/Create">
+                  <i class="uil uil-thumbs-up"></i>
+                  <span class="link-name">Add Activity</span>
+                </a>
+              </li>
             <li>
               <a href="/users">
                 <i class="uil uil-thumbs-up"></i>
@@ -689,14 +694,14 @@ nav.close ~ .dashboard .top {
           </ul>
           <ul class="logout-mode">
             <li>
-                <form action="/logout" method="POST">
-                <button type="submit">
-                    <a href="/logout">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit">
                         <i class="uil uil-signout"></i>
                         <span class="link-name">Logout</span>
-                      </a>
-                </button>
+                    </button>
                 </form>
+
 
             </li>
 
