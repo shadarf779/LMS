@@ -2,7 +2,7 @@
 
 
          <!---------------------------- Takeaways ---------------------------->
-         <section id="activity" class="takeaways my-5 bg-light">
+         <section id="activity" class="takeaways mt-8 mb-5 bg-light">
 
 
          <div class="container">

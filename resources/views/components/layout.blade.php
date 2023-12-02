@@ -158,21 +158,24 @@
                                     <img
                                         src="images/header-slide-1.jpg"
                                         alt=""
-                                        class="d-block w-100 rounded-5"
+                                        class="d-block w-100 h-auto rounded-5"
+                                        
                                     />
                                 </div>
                                 <div class="carousel-item">
                                     <img
                                         src="images/header-slide-2.jpg"
                                         alt=""
-                                        class="d-block w-100 rounded-5"
+                                        class="d-block w-100 h-auto rounded-5"
+                            
                                     />
                                 </div>
                                 <div class="carousel-item">
                                     <img
                                         src="images/header-slide-3.jpg"
                                         alt=""
-                                        class="d-block w-100 rounded-5"
+                                        class="d-block w-100 h-auto rounded-5"
+                                        
                                     />
                                 </div>
                             </div>
