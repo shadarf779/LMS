@@ -46,13 +46,7 @@
                         @endforeach
 
                     </div>
-                    <div class="data email">
-                        <span class="data-title">date</span>
-                        @foreach($activites as $activity)
-                        <span class="data-list">{{$activity->date}}</span>
-                        @endforeach
-
-                    </div>
+                   
 
                     <div class="data email">
                         <span class="data-title">location</span>

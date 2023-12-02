@@ -1,7 +1,7 @@
 <x-admin-layout>
 
 
-   
+
     <!------------------------------------------------ Dashboard ------------------------------------------------>
 
     <section class="dashboard">
@@ -63,12 +63,7 @@
                         @endforeach
 
                     </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        @foreach($registerrequest as $registerrequests)
-                        <span class="data-list">{{$registerrequests->updated_at}}</span>
-                       @endforeach
-                    </div>
+              
                     <div class="data type">
                         <span class="data-title">Acitivity Name</span>
                         @foreach($registerrequest as $registerrequests)

@@ -1,338 +1,888 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<x-admin-layout>
 
-    <title>Course Details | LMS</title>
-
-    <meta
-      name="keywords"
-      content="
-"
-    />
-    <meta
-      name="description"
-      content="
-"
-    />
-
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="assets/img/1632723997.png"
-    />
-
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
-    <link rel="stylesheet" href="assets/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/coursedetail.css">
-    <link rel="stylesheet" href="css/shared.css" />
-    <link rel="stylesheet" href="css/signup.css" />
+    <style>
+        /* Additional styling for stars */
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: ltr;
+            text-align: center;
+        }
+        .rating label {
+            color: #f39c12;
+            font-size: 1.5rem;
+            padding: 0.1em;
+            display: inline-block;
+        }
+    </style>
 
 
-  </head>
 
-  <body>
 
-   <!---------------------------- Navigation ---------------------------->
-   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="container">
-        <a href="index.html" class="navbar-brand">
-            <img src="images/soranbanner.png" alt="" width="50bit" />
-        </a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#home"
-                        >Home</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#discover">Discover</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#summary">Summary</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#takeaways">Takeaways</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#subscribe">Subscribe</a>
-                </li>
-            </ul>
-            <div class="nav-icons">
-              <span class="nav-item">
-                  <span class="fa-stack">
-                      <a href="#">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i
-                              class="fab fa-facebook-f fa-stack-1x text-white"
-                          ></i>
-                      </a>
-                  </span>
-              </span>
-              <span class="nav-item">
-                  <span class="fa-stack">
-                      <a href="#">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i
-                              class="fab fa-twitter fa-stack-1x text-white"
-                          ></i>
-                      </a>
-                  </span>
-              </span>
-          </div>
-        </div>
+
+
+
+        <!------------------------------------------------ Iconscout CSS ------------------------------------------------>
+        <link
+          rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
+        <!------------------------------------------------ CSS ------------------------------------------------>
+       <style>
+    /* ===== Google Font Import - Poppins ===== */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      /* ===== Colors ===== */
+      --primary-color: #0e4bf1;
+      --panel-color: #fff;
+      --text-color: #000;
+      --black-light-color: #707070;
+      --border-color: #e6e5e5;
+      --toggle-color: #ddd;
+      --box1-color: #4da3ff;
+      --box2-color: #ffe6ac;
+      --box3-color: #e7d1fc;
+      --title-icon-color: #fff;
+
+      /* ====== Transition ====== */
+      /*
+
+    transition: Specifies how CSS property changes are animated over time.
+
+    all: Applies the transition effect to all CSS properties of the element.
+
+    0.2s: Sets the duration of the transition to 0.2 seconds for smooth animation.
+
+    ease: Determines the timing function for the animation, creating a smooth and natural effect.
+
+    transition-delay: Adds seconds delay before the transition effect begins.
+    transition: property duration timing-function delay;
+
+
+      */
+
+      --tran-05: all 0.5s ease;
+      --tran-03: all 0.3s ease;
+      --tran-03: all 0.2s ease;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--primary-color);
+    }
+
+
+    /* body.dark: Selects the <body> element with a specific class attribute.
+       In this context, it targets the <body> element if and only if
+       it carries the "dark" class attribute, allowing for custom
+       styling of a dark-themed webpage. */
+
+    body.dark {
+      --primary-color: #3a3b3c;
+      --panel-color: #242526;
+      --text-color: #ccc;
+      --black-light-color: #ccc;
+      --border-color: #4d4c4c;
+      --toggle-color: #fff;
+      --box1-color: #3a3b3c;
+      --box2-color: #3a3b3c;
+      --box3-color: #3a3b3c;
+      --title-icon-color: #ccc;
+    }
+    /* === Custom Scroll Bar CSS === */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0e4bf1;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0b3cc1;
+    }
+
+    body.dark::-webkit-scrollbar-thumb:hover,
+    body.dark .activity-data::-webkit-scrollbar-thumb:hover {
+      background: #3a3b3c;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      padding: 10px 14px;
+      background-color: var(--panel-color);
+      border-right: 1px solid var(--border-color);
+      transition: var(--tran-05);
+    }
+    nav.close {
+      width: 73px;
+    }
+    nav .logo-name {
+      display: flex;
+      align-items: center;
+    }
+    nav .logo-image {
+      display: flex;
+      justify-content: center;
+      min-width: 45px;
+    }
+
+     /*
+        cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+        */
+    nav .logo-image img {
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+
+    /* bo awaya kaaa navaka close bu nusenakan logo basharetawa */
+    nav .logo-name .logo_name {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-left: 14px;
+      transition: var(--tran-05);
+    }
+    nav.close .logo_name {
+      opacity: 0;
+      pointer-events: none;
+    }
+    nav .menu-items {
+      margin-top: 40px;
+      height: calc(100% - 90px);
+
+
+      /* ama bo awaya itemakan (ul) barena zher yak u spaece lanewanyan habe */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-items li {
+      list-style: none;
+    }
+    .menu-items li a {
+      display: flex;
+      align-items: center;
+      /* ama duryan daxatawa */
+      height: 50px;
+      text-decoration: none;
+      /* position: relative; la darkawtne bazna shenaka yaramteman dada bo away baznaka lasare darkawe chunka position baznaka absluta */
+      position: relative;
+    }
+
+
+    /* The ::before selector inserts something before the content of each selected element(s). */
+    /* a:hover:before  bo awaya katek hovert lasar tage a krd awa la lay chape tage a ba -7px baznake shen dabne  */
+
+    .nav-links li a:hover:before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+    }
+    body.dark li a:hover:before {
+      background-color: var(--text-color);
+    }
+    .menu-items li a i {
+      font-size: 24px;
+      min-width: 45px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--black-light-color);
+    }
+
+    /* bo awaya kaaa navaka close bu nusenakan tage a basharetawa u makuse ka dabaya sare mouseaka nabeta dast */
+    .menu-items li a .link-name {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--black-light-color);
+      transition: var(--tran-05);
+    }
+    nav.close li a .link-name {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .nav-links li a:hover i,
+    .nav-links li a:hover .link-name {
+      color: var(--primary-color);
+    }
+    body.dark .nav-links li a:hover i,
+    body.dark .nav-links li a:hover .link-name {
+      color: var(--text-color);
+    }
+    .menu-items .logout-mode {
+      padding-top: 10px;
+      border-top: 1px solid var(--border-color);
+    }
+    .menu-items .mode {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    .menu-items .mode-toggle {
+      position: absolute;
+      right: 14px;
+      height: 50px;
+      min-width: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .mode-toggle .switch {
+      position: relative;
+      display: inline-block;
+      height: 22px;
+      width: 40px;
+      border-radius: 25px;
+      background-color: var(--toggle-color);
+    }
+    .switch:before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 15px;
+      width: 15px;
+      background-color: var(--panel-color);
+      border-radius: 50%;
+      transition: var(--tran-03);
+    }
+    body.dark .switch:before {
+      left: 20px;
+    }
+
+    .dashboard {
+      position: relative;
+      left: 250px;
+      background-color: var(--panel-color);
+      min-height: 100vh;
+      width: calc(100% - 250px);
+      padding: 10px 14px;
+      transition: var(--tran-05);
+    }
+    nav.close ~ .dashboard {
+      left: 73px;
+      width: calc(100% - 73px);
+    }
+    .dashboard .top {
+      position: fixed;
+      top: 0;
+      left: 250px;
+      display: flex;
+      width: calc(100% - 250px);
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      background-color: var(--panel-color);
+      transition: var(--tran-05);
+      z-index: 10;
+    }
+    nav.close ~ .dashboard .top {
+      left: 73px;
+      width: calc(100% - 73px);
+    }
+    .dashboard .top .sidebar-toggle {
+      font-size: 26px;
+      color: var(--text-color);
+      cursor: pointer;
+    }
+    .dashboard .top .search-box {
+      position: relative;
+      height: 45px;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 30px;
+    }
+    .top .search-box input {
+      position: absolute;
+      border: 1px solid var(--border-color);
+      background-color: var(--panel-color);
+      padding: 0 25px 0 50px;
+      border-radius: 5px;
+      height: 100%;
+      width: 100%;
+      color: var(--text-color);
+      font-size: 15px;
+      font-weight: 400;
+      outline: none;
+    }
+    .top .search-box i {
+      position: absolute;
+      left: 15px;
+      font-size: 22px;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--black-light-color);
+    }
+    .top img {
+      width: 40px;
+      border-radius: 50%;
+    }
+    .dashboard .dash-content {
+      padding-top: 50px;
+    }
+    .dash-content .title {
+      display: flex;
+      align-items: center;
+      margin: 60px 0 30px 0;
+    }
+    .dash-content .title i {
+      position: relative;
+      height: 35px;
+      width: 35px;
+      background-color: var(--primary-color);
+      border-radius: 6px;
+      color: var(--title-icon-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .dash-content .title .text {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-color);
+      margin-left: 10px;
+    }
+    .dash-content .boxes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .dash-content .boxes .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 12px;
+      width: calc(100% / 3 - 15px);
+      padding: 15px 20px;
+      background-color: var(--box1-color);
+      transition: var(--tran-05);
+    }
+    .boxes .box i {
+      font-size: 35px;
+      color: var(--text-color);
+    }
+    .boxes .box .text {
+      white-space: nowrap;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+    .boxes .box .number {
+      font-size: 40px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+    .boxes .box.box2 {
+      background-color: var(--box2-color);
+    }
+    .boxes .box.box3 {
+      background-color: var(--box3-color);
+    }
+    .dash-content .activity .activity-data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .activity .activity-data {
+      display: flex;
+    }
+    .activity-data .data {
+      display: flex;
+      flex-direction: column;
+      margin: 0 15px;
+    }
+    .activity-data .data-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+    .activity-data .data .data-list {
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 20px;
+      white-space: nowrap;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 1000px) {
+      nav {
+        width: 73px;
+      }
+      nav.close {
+        width: 250px;
+      }
+      nav .logo_name {
+        opacity: 0;
+        pointer-events: none;
+      }
+      nav.close .logo_name {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+      }
+      nav.close li a .link-name {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      nav ~ .dashboard {
+        left: 73px;
+        width: calc(100% - 73px);
+      }
+      nav.close ~ .dashboard {
+        left: 250px;
+        width: calc(100% - 250px);
+      }
+      nav ~ .dashboard .top {
+        left: 73px;
+        width: calc(100% - 73px);
+      }
+      nav.close ~ .dashboard .top {
+        left: 250px;
+        width: calc(100% - 250px);
+      }
+      .activity .activity-data {
+        overflow-x: scroll;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .dash-content .boxes .box {
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+      }
+    }
+    @media (max-width: 560px) {
+      .dash-content .boxes .box {
+        width: 100%;
+      }
+    }
+    @media (max-width: 400px) {
+      nav {
+        width: 0px;
+      }
+      nav.close {
+        width: 73px;
+      }
+      nav .logo_name {
+        opacity: 0;
+        pointer-events: none;
+      }
+      nav.close .logo_name {
+        opacity: 0;
+        pointer-events: none;
+      }
+      nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+      }
+      nav.close li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+      }
+      nav ~ .dashboard {
+        left: 0;
+        width: 100%;
+      }
+      nav.close ~ .dashboard {
+        left: 73px;
+        width: calc(100% - 73px);
+      }
+      nav ~ .dashboard .top {
+        left: 0;
+        width: 100%;
+      }
+      nav.close ~ .dashboard .top {
+        left: 0;
+        width: 100%;
+      }
+    }
+
+
+    .mynav{
+        padding-left: 0;
+    }
+    </style>
+
+
+
+    <!----------------------------------------- Main Form style----------------------------------------->
+
+
+    <style>
+
+    .regester-part {
+      margin: 5rem auto 0 auto;
+      max-width: 700px;
+      width: 100%;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark .regester-part{
+        background-color: #3a3b3c;
+    }
+
+
+    .regester-part h1 {
+      font-size: 1.5rem;
+      color: #333 !important;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    aside .form {
+      margin-top: 30px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    aside .form .input-box {
+      width: 100%;
+      margin-top: 20px;
+    }
+    aside .form .input-box label {
+      color: #333 !important;
+      float: inline-start;
+    }
+    aside .form .input-box input {
+      text-align: left;
+    }
+
+    aside .form .input-box input::placeholder {
+      text-align: left;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    aside .form :where(.input-box input, .select-box) {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      outline: none;
+      font-size: 1rem;
+      color: #707070;
+      margin-top: 8px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0 15px;
+    }
+
+    aside .form .input-box input:focus {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    aside .form .radio_btn_selected {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    aside .form .radio_btn_selected h3 {
+      color: #333 !important;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    aside .form :where(.radio_btn_option, .values) {
+      display: flex;
+      align-items: center;
+      column-gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .radio_btn_option {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      column-gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    aside .form .values {
+      column-gap: 5px;
+    }
+    aside .form .values input {
+      accent-color: rgb(130, 106, 251);
+    }
+    aside .form :where(.values input, .values label) {
+      cursor: pointer;
+    }
+    aside .form .values label {
+      color: #707070;
+    }
+
+    .address :where(input, .select-box) {
+      margin-top: 15px;
+    }
+    .select-box select {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      border: none;
+      color: #707070;
+      font-size: 1rem;
+      text-align: start;
+    }
+
+    .signup-btns{
+      display: flex;
+      justify-content: start;
+      gap: 1rem;
+      margin-top: 1rem;
+
+    }
+
+    .signup-btns #nextButton1{
+      padding: 5px 20px 10px 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-2 {
+      display: none;
+    }
+
+    body.dark .regester-part h1, aside .form label{
+        color: white !important;
+    }
+
+    body.dark .regester-part aside .form label{
+        color: white !important;
+    }
+
+    .custom-textarea {
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          margin-top: 20px;
+
+          outline: none;
+
+
+      background: none;
+        }
+
+    .custom-textarea:focus{
+      outline: none;
+      box-shadow: none;
+      border: solid 1px black;
+
+      background: none;
+    }
+
+    body.dark .custom-textarea{
+      background-color: white;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 500px) {
+      .form :where(.radio_btn_option, .values) {
+        row-gap: 15px;
+      }
+    }
+    </style>
+    <!------------------------------------------------ Dashboard ------------------------------------------------>
+<section class="dashboard">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+        <img src="img/profile.jpg" alt="">
     </div>
-</nav>
 
 
-    <!-------------------------------------------------------- Main -------------------------------------------------------->
+      <!-------------------------------------------------------- Main -------------------------------------------------------->
 
     <main style="margin-top: 8rem;">
-      <section class="regester-part">
-        <h1>add new Activity</h1>
-        <aside class="form-1">
-          <form action="#" class="form">
-            <div class="input-box">
-              <label>:ناوی تەواو</label>
-              <input type="text" placeholder=":ناوی تەوات بنوسە" required />
-            </div>
-
-            <div class="input-box">
-              <label>:ئیمەیڵ</label>
-              <input type="email" placeholder=":ئیمەیڵت بنوسە" required />
-            </div>
-
-            <div class="input-box">
-              <label>:ژمارە مۆبایل</label>
-              <input
-                type="number"
-                placeholder=":ژمارە مۆبایلت بنوسە"
-                required
-              />
-            </div>
-
-            <div class="input-box">
-              <label for="">:پاسوۆرد</label>
-              <input type="text" placeholder=":پاسوۆرد بنوسە" required />
-            </div>
-
-            <div class="signup-btns">
-              <button id="nextButton1" type="button" onclick="nextPart(1)">
-                دواتر
-              </button>
-            </div>
-
-        </aside>
-
-        <aside class="form-2">
-
-            <div class="form">
+        <section class="regester-part">
+         <h1>Add New Post</h1>
+          <aside class="form-1">
+            <form action="#" class="form">
               <div class="input-box">
-                <label>:بەرواری لەدایکبوون</label>
+                <label>Activity  Name</label>
+                <input type="text" placeholder="Enter Post Name" required />
+              </div>
+              <div class="input-box">
+                <label class="mb-2" for="exampleTextarea">Activity  Description</label>
+                <br>
+                <textarea style="width: 100%" class="form-control custom-textarea" id="exampleTextarea" rows="5" placeholder="Type your Post description here..."></textarea>
+              </div>
+              <div class="input-box">
+                <label>Activity Date</label>
                 <input
                   type="date"
-                  placeholder=":بەرواری لەدایکبوونت بنوسە"
                   required
                 />
               </div>
-              <!--
-
-                Dont touch that:
-
-                <div class="input-box address">
-                <label>Address</label>
-                <input type="text" placeholder="Enter street address" required />
-                <input
-                  type="text"
-                  placeholder="Enter street address line 2"
-                  required
-                />
-                <div class="column">
-                  <div class="select-box">
-                    <select>
-                      <option hidden>Country</option>
-                      <option>Kurdistan</option>
-                      <option>USA</option>
-                      <option>Canada</option>
-                      <option>UK</option>
-                    </select>
-                  </div>
-                  <input type="text" placeholder="Enter your city" required />
-                </div>
-                <div class="column">
-                  <input type="text" placeholder="Enter your region" required />
-                  <input type="number" placeholder="Enter postal code" required />
-                </div>
-              </div>
-
-
-
-
-               -->
-
-               <div class="input-box">
-                <label>:فاکەڵتی</label>
-                <input type="text" placeholder=":لە کام فاکەڵتیت" required />
-              </div>
 
               <div class="input-box">
-                <label>:بەش</label>
-                <input type="text" placeholder=":لە کام بەشیت" required />
+                <label>Activity Location</label>
+                <input type="text" placeholder="Enter Activity Location" required />
               </div>
-
-              <div class="input-box">
-                <label>:قۆناخ</label>
-                <input type="text" placeholder=":لە کام قۆناخی" required />
-              </div>
-
-
-
-              <div class="radio_btn_selected">
-                <h3>:cdc ئایا پێشتر کاری خۆبەخشیت کردووە بۆ</h3>
-                <div class="radio_btn_option">
-
-                  <div class="values">
-                    <input type="radio" id="Notvolunteered" name="isvolunteered" />
-                    <label for="Notvolunteered">نەخێر</label>
-                  </div><div class="values">
-                    <input type="radio" id="volunteered" name="isvolunteered" />
-                    <label for="volunteered">بەڵێ</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="radio_btn_selected">
-                <h3>:ڕەگەز</h3>
-                <div class="radio_btn_option">
-                  <div class="values">
-                    <input type="radio" id="check-male" name="gender" />
-                    <label for="check-male">نێر</label>
-                  </div>
-                  <div class="values">
-                    <input type="radio" id="check-female" name="gender" />
-                    <label for="check-female">مێ</label>
-                  </div>
-                </div>
-              </div>
-
-
-
 
 
               <div class="signup-btns">
-                <button id="submitButton" type="submit">
-                  ناردن
+                <button id="nextButton1" type="button" onclick="nextPart(1)">
+                 Next
                 </button>
-                <button id="prevButton2" type="button" onclick="prevPart(2)">
-                  گەڕانەوە
-                </button>
-
               </div>
-            </div>
+
+          </aside>
+
+          <aside class="form-2">
+
+              <div class="form">
+                <div class="input-box">
+                  <label>DeadLine</label>
+                  <input
+                    type="date"
+                    required
+                  />
+                </div>
+
+
+                <div class="input-box">
+                  <label>Max Participant</label>
+                  <input type="number" placeholder="number of MAX Participant" required />
+                </div>
+
+
+                <div class="input-box">
+                  <label>Registration Code</label>
+                  <input type="number" placeholder="Enter registration code" required />
+                </div>
 
 
 
-          </form>
-        </aside>
-      </section>
-    </main>
 
-    <!-------------------------------------------------------- Footer -------------------------------------------------------->
 
-     <!---------------------------- Footer ---------------------------->
-     <footer class="footer mt-4 text-bg-dark py-5">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-4">
-                  <h5 style="color: white;">Lorem Ipsum</h5>
-                  <p style="color: white;">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing
-                      elit. Eos possimus aliquid omnis commodi.
-                      Dignissimos, quam obcaecati? Fugit non ex
-                      repellendus?
-                  </p>
+                <div class="signup-btns">
+                  <button id="prevButton2" type="button" onclick="prevPart(2)">
+                    Back
+                  </button>
+                  <button id="submitButton" type="submit">
+                    Send
+                  </button>
+
+
+                </div>
               </div>
-              <div class="col-md-4">
-                  <h3 style="color: white;">Quick Links</h3>
-                  <ul class="list-unstyled">
-                      <li><a href="#home">Home</a></li>
-                      <li><a href="#discover">Discover</a></li>
-                      <li><a href="#summary">Summary</a></li>
-                      <li><a href="#takeaways">Takeaways</a></li>
-                      <li><a href="#subscribe">Subscribe</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-4">
-                  <h5 style="color: white;">Connect</h5>
-                  <div class="d-flex gap-3">
-                      <a href="#"
-                          ><i class="fab fa-facebook fa-3x text-white"></i
-                      ></a>
-                      <a href="#"
-                          ><i class="fab fa-twitter fa-3x text-white"></i
-                      ></a>
-                      <a href="#"
-                          ><i class="fab fa-linkedin fa-3x text-white"></i
-                      ></a>
-                      <a href="#"
-                          ><i
-                              class="fab fa-instagram fa-3x text-white"
-                          ></i
-                      ></a>
-                      <a href="#"
-                          ><i class="fab fa-youtube fa-3x text-white"></i
-                      ></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
-        <!---------------------------- javascript ---------------------------->
 
 
-    <script>
-      function nextPart(currentPart) {
-        if (currentPart === 1) {
-          document.querySelector(".form-1").style.display = "none";
-          document.querySelector(".form-2").style.display = "block";
-        }
+
+            </form>
+          </aside>
+        </section>
+      </main>
+
+
+
+</section>
+
+
+
+
+
+
+
+    <script >const body = document.querySelector("body"),
+        modeToggle = body.querySelector(".mode-toggle");
+        sidebar = body.querySelector("nav");
+        sidebarToggle = body.querySelector(".sidebar-toggle");
+
+  let getMode = localStorage.getItem("mode");
+  if(getMode && getMode ==="dark"){
+      body.classList.toggle("dark");
+  }
+
+  let getStatus = localStorage.getItem("status");
+  if(getStatus && getStatus ==="close"){
+      sidebar.classList.toggle("close");
+  }
+
+  modeToggle.addEventListener("click", () =>{
+      body.classList.toggle("dark");
+      if(body.classList.contains("dark")){
+          localStorage.setItem("mode", "dark");
+      }else{
+          localStorage.setItem("mode", "light");
       }
+  });
 
-      function prevPart(currentPart) {
-        if (currentPart === 2) {
-          document.querySelector(".form-1").style.display = "block";
-          document.querySelector(".form-2").style.display = "none";
-        }
+  sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+      if(sidebar.classList.contains("close")){
+          localStorage.setItem("status", "close");
+      }else{
+          localStorage.setItem("status", "open");
       }
-    </script>
+  })</script>
+
+
+
+<script>
+    function nextPart(currentPart) {
+      if (currentPart === 1) {
+        document.querySelector(".form-1").style.display = "none";
+        document.querySelector(".form-2").style.display = "block";
+      }
+    }
+
+    function prevPart(currentPart) {
+      if (currentPart === 2) {
+        document.querySelector(".form-1").style.display = "block";
+        document.querySelector(".form-2").style.display = "none";
+      }
+    }
+  </script>
 
 
 
@@ -340,12 +890,27 @@
 
 
 
-<script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/darkmodetoggle.js"></script>
+
+<script src="../js/script.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
 
     <script src="js/shared.js"></script>
+<script>
+  const popoverTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
 
+  const popoverList = [...popoverTriggerList].map(
+    (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+  );
+</script>
+</x-admin-layout>
 
-  </body>
-</html>

@@ -29,7 +29,11 @@ Route::get('/showfeedback', [ShowFeedBackController::class, 'showFeedback'])->mi
 Route::get('/UserFeedback/{id}', [FeedbackController::class, 'submitFeedback']);
 
 
-
+Route::get('/CreateActivity', function () {
+    if(auth()->user()->Role == "admin")  {
+    return view('admin.Create');
+        }
+});
 
 Route::get('/Create', function () {
     if(auth()->user()->Role == "admin")  {
@@ -136,6 +140,13 @@ Route::get('/reject/{id}', function ($id) {
 
 Route::get('/myactivity', function () {
 
+
+    return view('user.myactivity');
+})->middleware('guest');
+
+
+Route::get('/myactivity', function () {
+
     $userid=Auth::user()->id;
     $appoint = registerrequest::where('user_id',$userid)->get();
 
@@ -145,11 +156,6 @@ Route::get('/myactivity', function () {
     ]);
 });
 
-Route::get('/myactivity', function () {
-
-
-    return view('user.myactivity');
-})->middleware('guest');
 
 
 
