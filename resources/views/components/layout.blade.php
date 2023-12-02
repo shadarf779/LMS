@@ -295,12 +295,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Lorem Ipsum</h5>
+                    <h5>Soran University Activity</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Eos possimus aliquid omnis commodi.
-                        Dignissimos, quam obcaecati? Fugit non ex
-                        repellendus?
+                    Welcome to Soran University Activity! Explore opportunities to enhance your skills and knowledge.
                     </p>
                 </div>
                 <div class="col-md-4">

@@ -217,19 +217,13 @@
                         class="col-lg-6 d-flex flex-column justify-content-center"
                     >
                         <h2>
-                            Elevate Your Learning Journey with Expert Seminars
+                        Enhance Your Learning Experience with Expert-Led Seminars
                         </h2>
                         <p>
-                            Join our expert-led seminars and unlock new
-                            possibilities in your personal and professional
-                            development. Our seminars cover a diverse range of
-                            topics, from leadership and innovation to personal
-                            growth and productivity.
+                        Participate in thought-provoking seminars led by industry experts, and discover new avenues for personal and professional growth.
                         </p>
                         <p>
-                            Immerse yourself in engaging discussions,
-                            interactive workshops, and valuable networking
-                            opportunities.
+                        Our seminars encompass a wide array of subjects, spanning from leadership and innovation to personal development and productivity.
                         </p>
                     </div>
                 </div>
