@@ -804,17 +804,17 @@ nav.close ~ .dashboard .top {
                   </div>
               </div>
           </div>
+        </div>
           @endif
           @endforeach
 
-        </div>
       </div>
 
       <!-------------------------------------------- Neutral Feedback -------------------------------------------->
       <div class="container" id="active-user">
         <h1 class="my-4">Neutral Feedback</h1>
         @foreach($feedbacks as $feedback)
-        @if($feedback->rating<4&&$feedback->rating>1)
+        @if(($feedback->rating)<4&&($feedback->rating)>1)
 
         <div class="row user-info">
 
@@ -846,6 +846,7 @@ nav.close ~ .dashboard .top {
                   </div>
               </div>
           </div>
+        </div>
           @endif
           @endforeach
       </div>
@@ -855,43 +856,43 @@ nav.close ~ .dashboard .top {
         <div class="container" id="banned-user">
           <h1 class="my-4">Negative Feedback</h1>
           @foreach($feedbacks as $feedback)
-          @if($feedback->rating<=1)
+        @if(($feedback->rating)<=1)
 
-          <div class="row user-info">
+        <div class="row user-info">
 
-            <div class="col-md-4 mb-4">
-                <div class="card border-info border-3 p-2">
-                    <div class="card-body">
-                        <h5 class="card-subtitle mb-2 text-muted">
+          <div class="col-md-4 mb-4">
+              <div class="card border-info border-3 p-2">
+                  <div class="card-body">
+                      <h5 class="card-subtitle mb-2 text-muted">
 
-                          @php
-                          $user = App\Models\User::find($feedback->user_id);
-                      @endphp
-                            Name: <span> {{ $user->name }}</span>
-                        </h5>
-                        <div class="rating">
-                                  @php $Rate = $feedback->rating
-                                  @endphp
-                                  @while($Rate--)
+                        @php
+                        $user = App\Models\User::find($feedback->user_id);
+                    @endphp
+                          Name: <span> {{ $user->name }}</span>
+                      </h5>
+                      <div class="rating">
+                                @php $Rate = $feedback->rating
+                                @endphp
+                                @while($Rate--)
 
-                                   <label><i class="fas fa-star"></i></label>
-                                  @endwhile
+                                 <label><i class="fas fa-star"></i></label>
+                                @endwhile
 
-                        </div>
-                        <p class="card-text">
+                      </div>
+                      <p class="card-text">
 
 
-                          {{ $feedback->comments }}
+                        {{ $feedback->comments }}
 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            @endif
-            @endforeach
+                      </p>
+                  </div>
+              </div>
+          </div>
+        </div>
+          @endif
+          @endforeach
         </div>
 
-      </div>
 </section>
 
 
