@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class FeedbackController extends Controller
 {
 
+    //
     public function submitFeedback($id, Request $request)
     {
         // Retrieve the authenticated user
