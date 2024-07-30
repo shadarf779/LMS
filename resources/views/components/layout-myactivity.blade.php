@@ -9,15 +9,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="css/font-awesome.css" />
-        <link rel="stylesheet" href="https://lms.ourprojects.link/public/css/bootstrap.css" />
-        <link rel="stylesheet" href="https://lms.ourprojects.link/public/css/shared.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/shared.css" />
         <link rel="icon" href="images/favicon.png" />
         <!------------------------------------------------ Iconscout CSS ------------------------------------------------>
         <link
             rel="stylesheet"
             href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
         />
-        <link rel="stylesheet" href="https://lms.ourprojects.link/public/css/home.css">
+       <link rel="stylesheet" href="css/home.css">
         <title>Soran LMS</title>
     </head>
     <body id="home">
@@ -309,7 +309,7 @@
           <i class="fal fa-chevron-double-up"></i>
         </a>
       </div>
-      <script src="https://lms.ourprojects.link/public/js/bootstrap.bundle.min.js"></script>
-      <script src="https://lms.ourprojects.link/public/js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -63,7 +63,7 @@ body {
 /* Custom CSS equivalent to btn btn-danger btn-sm m-1 */
 .custom-btn {
     display: inline-block;
-    padding: 4px ;
+    padding: 8px ;
     font-size: 0.875rem; /* Equivalent to Bootstrap's btn-sm */
     line-height: 1.5;
     border: 1px solid #dc3545; /* Equivalent to Bootstrap's btn-danger border color */
@@ -79,7 +79,7 @@ body {
 /* Custom CSS equivalent to btn btn-success btn-sm m-1 */
 .success-btn {
     display: inline-block;
-    padding:  4px;
+    padding:  8px;
     font-size: 0.875rem; /* Equivalent to Bootstrap's btn-sm */
     line-height: 1.5;
     border: 1px solid #28a745; /* Equivalent to Bootstrap's btn-success border color */

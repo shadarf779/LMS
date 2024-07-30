@@ -2,7 +2,7 @@
 
 
          <!---------------------------- Takeaways ---------------------------->
-         <section id="activity" class="takeaways mt-8 mb-5 bg-light">
+         <section id="activity" class="takeaways my-5 bg-light">
 
 
          <div class="container">
@@ -217,13 +217,19 @@
                         class="col-lg-6 d-flex flex-column justify-content-center"
                     >
                         <h2>
-                        Enhance Your Learning Experience with Expert-Led Seminars
+                            Elevate Your Learning Journey with Expert Seminars
                         </h2>
                         <p>
-                        Participate in thought-provoking seminars led by industry experts, and discover new avenues for personal and professional growth.
+                            Join our expert-led seminars and unlock new
+                            possibilities in your personal and professional
+                            development. Our seminars cover a diverse range of
+                            topics, from leadership and innovation to personal
+                            growth and productivity.
                         </p>
                         <p>
-                        Our seminars encompass a wide array of subjects, spanning from leadership and innovation to personal development and productivity.
+                            Immerse yourself in engaging discussions,
+                            interactive workshops, and valuable networking
+                            opportunities.
                         </p>
                     </div>
                 </div>
